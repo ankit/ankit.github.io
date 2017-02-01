@@ -1,0 +1,308 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Installing the Front End Editor extension on Joomla 1.5 - Ankit Ahuja</title>
+  <meta name="author" content="Ankit Ahuja">
+
+  
+  <meta name="description" content="Many of you already know that I created the “Front End Editor” a.k.a &#8221;Enhanced Front End Editing&#8221; extension for Joomla! as part of Google &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://ankit.github.io/blog/2009/10/01/installing-the-front-end-editor-extension-on-joomla-1-5">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Ankit Ahuja" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   class="no-sidebar"  >
+  <header role="banner">
+    <hgroup>
+  <h1><a href="/">Ankit Ahuja</a></h1>
+  
+    <h2>Code. Experiment. Read.</h2>
+  
+</hgroup>
+
+
+  </header>
+  <nav role="navigation">
+    
+<ul class="main-navigation">
+  <li>
+    <a href="/blog">
+      Blog
+    </a>
+  </li>
+  <li>
+    <a href="/projects">
+      Projects
+    </a>
+  </li>
+  <li>
+    <a href="/resume">
+      Résumé
+    </a>
+  </li>
+  <li>
+    <a href="/thesis">
+      Thesis
+    </a>
+  </li>
+  <li>
+</ul>
+
+
+  </nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Installing the Front End Editor Extension on Joomla 1.5</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-10-01T00:00:00-07:00" pubdate data-updated="true">Oct 1<span>st</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Many of you already know that I created the “<strong>Front End Editor</strong>” a.k.a &#8221;<strong>Enhanced Front End Editing</strong>&#8221; extension for Joomla! as part of Google Summer of Code 2009. The extension only works in 1.5.x right now. Even though I tried to make it easy to adopt the extension by making it easy to setup, the extension does rely on the template quite a bit. I thought if I explain the installation process, all the hacks the extension makes and the underlying dependencies in a blogpost, it should help in getting rid of confusion to some degree.</p>
+
+<p>You can download the <a href="http://extensions.joomla.org/extensions/news-production/content-submission/9838">extension</a> from JED.</p>
+
+<!-- more -->
+
+
+<h2>Installation</h2>
+
+<ol>
+<li><p>Install <strong>com_frontendeditor</strong>, <strong>plg_frontendeditor</strong> and <strong>plg_articleeditor</strong> from <a href="http://joomlacode.org/gf/project/frediting/frs/?action=FrsReleaseBrowse&amp;amp;frs_package_id=4870">here</a>.</p></li>
+<li><p>Enable the plugins “System - Frontend Editor” and “Content - Frontend Article Editor”.</p></li>
+<li><p>Go to <strong>Components -> Enhanced Frontend Editor</strong> at the backend and click on <strong>Apply Changes</strong>. You can modify the settings there to suit your template and needs.</p></li>
+</ol>
+
+
+<h2>Hacks (applied when you click on <strong>Apply Changes</strong>)</h2>
+
+<ol>
+<li><p>Adds the module chrome <code>modChromefreditor</code> to the <code>html/modules.php</code> file of the current template. Before doing this, it creates a backup file <code>html/modules.php.backup</code>.</p></li>
+<li><p>After creating a backup of <code>index.php</code> as <code>index.php.backup</code>, it modifies the following statements in the “index.php” of the current template:</p>
+
+<ul>
+<li><p>All the jdoc statements get the style <code>freditor</code>.</p>
+
+<p>  Example:</p>
+
+<p>  <code>
+  &lt;jdoc:include type='modules' name='top'&gt;
+ </code></p>
+
+<p>  gets changed into</p>
+
+<p>  <code>
+  &lt;jdoc:include type='modules' name='top' style='freditor'&gt;
+ </code></p></li>
+<li><p>Surrounds the jdoc statements with a <code>div</code> that has a class in the format <code>frpos.position-name</code>.</p>
+
+<p>  Example:</p>
+
+<p>  <code>
+  &lt;jdoc:include type='modules' name='user3' style='freditor'&gt;
+ </code></p>
+
+<p>  gets changed into</p>
+
+<p>  <code>
+  &lt;div class='frpos.user3'&gt;&lt;jdoc:include type='modules' name='user3' style='freditor'&gt;&lt;/div&gt;
+ </code></p></li>
+<li><p>Replaces the existing <code>/html/com_content/article/form.php</code> with a custom <code>form.php</code>, after creating a backup &#8211; <code>form.php.backup</code>.</p></li>
+</ul>
+</li>
+</ol>
+
+
+<p>The backup files are created so that you can undo the changes anytime by clicking on <strong>Revert Changes</strong>. You should revert the hack if you choose to uninstall the extension.</p>
+
+<p>You’ll also need to apply the hack separately for each template you want to use.</p>
+
+<h2>Dependencies and Limitations</h2>
+
+<ul>
+<li><p><strong>Mootools 1.2</strong>
+  Perhaps the biggest limitation of this extension is that it uses mootools 1.2 instead of 1.1 which is used in Joomla! 1.5. Consequently, some of your javascript that uses mootools 1.1 may not work properly when you’re logged in. Mootools 1.2 will only replace 1.1 when you’re logged in at the front-end and have the plugins enabled. The reason I chose 1.2 is that Joomla! 1.6 will use mootools 1.2.</p></li>
+<li><p><strong>Menu-item title editing</strong>
+  The menu-item titles must be enclosed in LI elements with the class in format <code>item&lt;menu-id&gt;</code>. Example:</p>
+
+<p>  <code>
+  &lt;li class='item13'&gt;&lt;span&gt;Joomla! Documentation&lt;/span&gt;&lt;/li&gt;
+ </code></p>
+
+<p>  If your template uses a different layout, you may want to modify it a little to support menu-item title editing. In case you don’t, you need not worry as each of these features degrade gracefully, without affecting the functionality or presentation of your site.</p></li>
+<li><p><strong>Default article edit icons are hidden</strong>
+  The default edit icons are hidden and the extension displays its own edit icons. You can specify their selector in the admin component. In case your template uses a different selector than the default one and you don’t specify it, a pair of edit icons can appear for each article which will lead to confusion.</p></li>
+<li><p><strong>Selectors for article and page titles</strong>
+If they are not the default, you can modify them in the admin so that editing of article and page titles works.</p></li>
+</ul>
+
+
+<h2>Future Versions</h2>
+
+<p>You can report any bugs <a href="http://joomlacode.org/gf/project/frediting/tracker/?action=TrackerItemBrowse&amp;amp;tracker_id=9019">here</a>. Since my college semester has now begun, any updates to the extension will probably come slowly. I plan to remove any trivial withstanding bugs, add new features with time and improve the extension in general. I would love to spend any free time in fixing bugs of the overall Joomla! project as well.</p>
+
+<p>As far as Joomla! 1.6 is concerned, I did create a patch for 1.6 but due to time constraints, it wasn’t included in the feature-set for 1.6. So, when a stable version of 1.6 is released, I’ll port this extension to support 1.6.</p>
+
+<p>I will love to know if the extension worked for you and any suggestions or feedback you want to give. You can either contact me via the <a href="http://ankitahuja.com/contact">Contact page</a> or send me an <a href="http://twitter.com/ahujaankit">@reply</a> on Twitter.</p>
+
+<p><strong>Update</strong></p>
+
+<p>This is a common recurring problem for version 0.3.7 of the extension. If you&#8217;re getting the following error:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Parse error: syntax error, unexpected '&', expecting T_VARIABLE or '$'
+</span><span class='line'>in your-install/administrator/components/com_frontendeditor/controller.php
+</span><span class='line'>on line 99</span></code></pre></td></tr></table></div></figure>
+
+
+<p>it means you&#8217;re probably using a version of PHP earlier than 5. Unfortunately, this piece of code only works in PHP 5. You&#8217;ll either need to update to PHP 5 or get the patch from <a href="http://joomlacode.org/gf/download/frsrelease/11233/44798/99line.patch">here</a>. You&#8217;ll need to apply the patch to <code>your-install/administrator/components/com_frontendeditor/controller.php</code>.</p>
+
+<p>In case you&#8217;re not familiar with applying a patch, you&#8217;ll have to execute the following command from the shell:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>patch -p1 -i 99line.patch controller.php</span></code></pre></td></tr></table></div></figure>
+
+
+<p>If you&#8217;ve issues, even though I am not maintaining the extension, you can email me at ahuja DOT ankit AT gmail DOT com.</p>
+</div>
+
+
+  <footer>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://ankit.github.io/blog/2009/10/01/installing-the-front-end-editor-extension-on-joomla-1-5/" data-via="ahujaankit" data-counturl="http://ankit.github.io/blog/2009/10/01/installing-the-front-end-editor-extension-on-joomla-1-5/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2009/09/28/twitkut-v2-0-to-be-an-oauth-gadget/" title="Previous Post: Twitkut v2.0 to be an OAuth Gadget">&laquo; Twitkut v2.0 to be an OAuth Gadget</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2009/10/04/the-mental-catastrophe-that-is-the-social-web/" title="next Post: The mental catastrophe that is the social web">The mental catastrophe that is the social web &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+
+    </div>
+  </div>
+  <div class="search-container">
+    
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:ankit.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+
+  </div>
+  <footer role="contentinfo">
+    <p>
+  Copyright &copy; 2017 - Ankit Ahuja -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+  - Theme adapted from <a href='http://aron.cedercrantz.com/'>Aron</a>
+</p>
+
+
+  </footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'ankitahuja';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

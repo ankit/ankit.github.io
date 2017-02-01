@@ -1,0 +1,1199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Ankit Ahuja]]></title>
+  <link href="http://ankit.github.io/atom.xml" rel="self"/>
+  <link href="http://ankit.github.io/"/>
+  <updated>2017-02-01T13:35:34-08:00</updated>
+  <id>http://ankit.github.io/</id>
+  <author>
+    <name><![CDATA[Ankit Ahuja]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Summer at Khan Academy]]></title>
+    <link href="http://ankit.github.io/blog/2012/08/27/summer-at-khan-academy/"/>
+    <updated>2012-08-27T01:19:00-07:00</updated>
+    <id>http://ankit.github.io/blog/2012/08/27/summer-at-khan-academy</id>
+    <content type="html"><![CDATA[<p>As I look back at my summer in the Bay Area, I am glad I got the opportunity to work at Khan Academy. When I accepted the internship offer, I expected to meet amazing people, build cool things, and learn a bunch. It turned out to be exactly that, and a lot more! To top it off, I got to spend a relaxing summer with family!</p>
+
+<!-- more -->
+
+
+<h2>What I did at KA</h2>
+
+<p>I was a part of the PHP (People Helping People!) team. We were a group of five focused on building features to grow the Khan Academy user community.</p>
+
+<h3>User’s Discussion Activity</h3>
+
+<p><img src="http://ankit.github.io/images/2012-08-27/1-profile-discussion.jpg" alt="Brit's profile" /></p>
+
+<p>As I played with the existing community features on the site, I noticed an obvious missing piece. When you visited a user’s profile, you couldn’t look at their contributions on the site. This could be useful when looking at an active user’s profile. But more than that, it could help users build up their identity on the site (like earning badges), and encourage better quality participation (less spaminess!). Later on, it proved useful from a moderator’s perspective as well. After intense design discussions with the likes of <a href="http://www.khanacademy.org/profile/kitthirasaki/discussion">Kitt</a> and <a href="http://shipordie.com">Jason</a>, it was wonderful to ship this within my first few weeks!</p>
+
+<h3>Make Discussion Public!</h3>
+
+<p><img src="http://ankit.github.io/images/2012-08-27/2-public-discussion.jpg" alt="Public Discussion" /></p>
+
+<p>Earlier, users could have private profiles, and their discussion would be hidden to other users. I made it so even for private users, you could visit their profile to look at their discussion! A first step towards potentially making all user profiles public?</p>
+
+<h3>Discussion on Video Pages</h3>
+
+<p><img src="http://ankit.github.io/images/2012-08-27/3-video-discussion.jpg" alt="Video Discussion" /></p>
+
+<p>We now had a new UI for showing user’s discussion activity on their profile, but the existing discussion the video pages still sucked. So, the next step was to refactor the code and visual styling of the discussion on the video pages. This turned out to be a bigger piece than I initially anticipated, which included working around Google App Engine’s limitations and learning about backfilling. This also came with new quality control features built by Drew! (low quality notices, better moderation tools and a lot more)</p>
+
+<h3>Discussion everywhere — Refactoring (lots of it!)</h3>
+
+<p><img src="http://ankit.github.io/images/2012-08-27/4-everywhere.jpg" alt="Discussion everywhere!" /></p>
+
+<p>As part of porting the video discussion, I came up with a new reusable Discussion Javascript plugin which could be easily plopped anywhere. This was in anticipation of supporting discussion in different places. It is now being used on User Profiles, Video Pages, Topic Pages, CS Scratchpads and the Moderator Queue! Jamie did a <a href="http://jamie-wong.com/2012/08/22/what-i-did-at-khan-academy/#Discussions">great job</a> of working on the backends to port the Discussion to work with any entity type (instead of just videos), and it was wonderful to have discussion show up on the site with the <a href="http://www.khanacademy.org/cs">Computer Science</a> launch.</p>
+
+<h3>Moderator Queue</h3>
+
+<p>As I neared the end of my internship, I scratched the surface of making the Moderator Queue usable and more rewarding and fun for moderators (including me!)</p>
+
+<h3>#FIXIT Day</h3>
+
+<p>I got to refactoring a couple of massive, jumbled up CSS files into Less. Go Less.</p>
+
+<h2>What I learnt</h2>
+
+<ul>
+<li>Writing code in small building blocks is an art. Thank you <a href="http://missmarcialee.com/">Marcia</a>!</li>
+<li>Breaking down big features into smaller ones, and planning subsequent deadlines makes everything more enjoyable and less of a chore.</li>
+<li>It is important to weigh the importance of features - to make sure you work on the right ones.</li>
+<li>Better packaging my work so that I can show it off during Dev Standups and Company Updates. Demos!</li>
+<li>With better planning, I could’ve done other non-PHP things.  This would have given me the opportunity to collaborate more with other people on different teams.</li>
+<li>I enjoy design discussions! Both abstract and specifically about user experiences of small features.</li>
+<li>I like all types of Beer. I also like Hotdogs.</li>
+</ul>
+
+
+<h2>Fun parts</h2>
+
+<ul>
+<li>Laid Back culture. Everybody can work at their own pace!</li>
+<li>Open-ness. It was so easy to look at what other teams were doing, and critique their work!</li>
+<li>Beer tastings, Bread eatings, Lemonades, Lunches on Castro St.</li>
+<li>Movie nights, hiking at Muir woods (some others I missed :|)</li>
+</ul>
+
+
+<p>I would miss working with the Khan Academy team and highly recommend it as a place to do an internship. It is one of the most enjoyable ones you could have! If you’re not convinced, you can read about <a href="http://benalpert.com/2012/08/24/what-i-did-at-khan-academy-2012.html">Ben&#8217;s</a> and <a href="http://jamie-wong.com/2012/08/22/what-i-did-at-khan-academy/">Jamie&#8217;s</a> experiences.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Deploying on Dreamhost using Git]]></title>
+    <link href="http://ankit.github.io/blog/2011/05/06/deploying-on-dreamhost-using-git/"/>
+    <updated>2011-05-06T00:00:00-07:00</updated>
+    <id>http://ankit.github.io/blog/2011/05/06/deploying-on-dreamhost-using-git</id>
+    <content type="html"><![CDATA[<p>I&#8217;ve done this for multiple sites (including a <a href="http://wordpress.org">Wordpress</a> blog) and thankfully I wrote down the instructions when I did it the first time. I find this way to deploy really useful. It gives you version control, and an easy and quick way to deploy small, incremental changes. Deploying is as simple as executing <code>git push live</code> from the command line.</p>
+
+<!-- more -->
+
+
+<p>Here are the step-by-step instructions to follow assuming the site name to be <code>rainbow</code>:</p>
+
+<ul>
+<li><p>Add or update the <code>robots.txt</code> in the containing folder of <code>rainbow</code>         <br/>
+<code>
+User-agent: *
+Disallow: /relative-path-to-rainbow
+</code></p></li>
+<li><p>To avoid entering your password every time, copy your SSH public key to the server using <a href="http://linux.die.net/man/1/ssh-copy-id">ssh-copy-id</a>. On Mac, you can install <code>ssh-copy-id</code> using <a href="http://mxcl.github.com/homebrew/">homebrew</a></p>
+
+<p>  <code>
+  brew install ssh-copy-id
+ </code></p></li>
+<li><p>Make sure you have local SSH keys setup. Then, do</p>
+
+<p>  <code>
+  ssh-copy-id -i user@domain.com
+ </code></p></li>
+<li><p>SSH into the server</p>
+
+<p>  <code>
+  ssh user@domain.com
+ </code></p></li>
+<li><p>Navigate to where you want to deploy your site on the server. Then, do</p></li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>mkdir rainbow
+</span><span class='line'>cd rainbow
+</span><span class='line'>git init
+</span><span class='line'>git config receive.denyCurrentBranch ignore   
+</span><span class='line'>curl https://raw.github.com/gist/2715777/c44c8f05711182c58aed2dace960614729aa916c/git_dreamhost_deploy.sh &gt; .git/hooks/post-upda
+</span><span class='line'>chmod +x .git/hooks/post-update   </span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li><p>In your local repository, add the remote (say <code>live</code>) pointing to the repository on the server:</p>
+
+<p>  <code>
+  git remote add live ssh://user@domain.com/absolute-path-to-rainbow
+ </code></p></li>
+<li><p>In your local copy, push to the remote repository</p>
+
+<p>  <code>
+  git push live master
+ </code></p></li>
+<li><p>On the remote repository, you may need to do <code>git checkout master</code> the first time to see the changes.</p></li>
+<li><p>That&#8217;s it! Whenever you need to deploy, just do</p>
+
+<p>  <code>
+  git push live
+ </code></p></li>
+</ul>
+
+
+<h2>Reference</h2>
+
+<p><a href="http://stackoverflow.com/questions/279169/deploy-php-using-git">http://stackoverflow.com/questions/279169/deploy-php-using-git</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[git Cheatsheet]]></title>
+    <link href="http://ankit.github.io/blog/2010/02/01/git-cheatsheet/"/>
+    <updated>2010-02-01T00:00:00-08:00</updated>
+    <id>http://ankit.github.io/blog/2010/02/01/git-cheatsheet</id>
+    <content type="html"><![CDATA[<p>When you&#8217;re new to git, it can get difficult to wrap your head around it at first. This is especially true if you&#8217;re migrating from subversion or when you&#8217;d rather spend more time writing your code than trying to learn git.</p>
+
+<p>Git requires some learning, and you might as well spend the time doing it rather than wondering what just happened after running a command. <a href="http://learn.github.com">Learn.github</a> is a good place to start to learn the basics.</p>
+
+<p>But even after spending some time learning git, there are going to be times that you&#8217;ve to painfully search the web/manual for basic stuff like working with remote branches or more complex stuff like handling a failed merge.</p>
+
+<p>For the same reason, I&#8217;m creating this post as a reference point for myself to avoid repetitive searches. I&#8217;ll keep adding new commands here if and when I use them.</p>
+
+<!-- more -->
+
+
+<p>This is no way near to a complete reference for git and there might be better ways to do the things listed here. These are just the commands I use the most, in the manner I prefer to use them.</p>
+
+<h2>Basics</h2>
+
+<ul>
+<li>Commit and Stage all changes</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git commit -am <span class="s2">&quot;log message&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Push Changes to remote repo</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git push
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Pull Changes to local repo</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git pull
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Check current status of working tree</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git status
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>View diff</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git diff
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Discard local uncommitted changes to a file (in this case, abc.txt)</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git checkout -- abc.txt
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Branches (Branch name is assumed to be <code>abc</code>)</h2>
+
+<h3>Working with local branches</h3>
+
+<ul>
+<li>Create a branch</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git branch abc
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Switch to a branch</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git checkout abc
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>View all existing branches</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git branch
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Remove a branch</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git branch -d abc
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Merge a branch</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c"># In this case, merging abc into master</span>
+</span><span class='line'>git checkout master
+</span><span class='line'>git merge abc
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Working with remote branches</h3>
+
+<ul>
+<li>Push a local branch to remote repo</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git push origin abc
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Delete a remote branch</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git push origin :abc
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Setup a local branch to track a remote branch</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git branch --track abc origin/abc
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Create a local branch, push it to remote repo. and then pull changes from it</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c"># Creating the new branch and switching to it</span>
+</span><span class='line'>git checkout -b abc;
+</span><span class='line'>
+</span><span class='line'><span class="c"># Pushing the changes</span>
+</span><span class='line'>git push
+</span><span class='line'>
+</span><span class='line'><span class="c"># Meanwhile someone else made changes to the remote version</span>
+</span><span class='line'><span class="c"># Pulling those changes</span>
+</span><span class='line'>git pull origin abc
+</span><span class='line'>
+</span><span class='line'><span class="c"># if you want to simply use &#39;git pull&#39; to get the changes, do the following</span>
+</span><span class='line'>git config branch.abc.remote origin
+</span><span class='line'>git config branch.abc.merge refs/heads/abc
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Alternative methods listed <a href="http://djwonk.com/blog/2009/04/18/tracking-remote-git-branches/">here</a>.</p>
+
+<h2>Tags (Tag name is assumed to be v1.0 here)</h2>
+
+<ul>
+<li>View all tags</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git tag
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Create a tag referencing a particular commit using its checksum (annotated)</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c"># here commit checksum is assumed to be 98eda02.</span>
+</span><span class='line'>
+</span><span class='line'><span class="c"># to view the checksum of a commit, you can do</span>
+</span><span class='line'>git log --pretty<span class="o">=</span>oneline
+</span><span class='line'>
+</span><span class='line'>git tag -am <span class="s1">&#39;v1.0&#39;</span> 98eda02
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Push tags to remote repo</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git push --tags
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Delete a local tag</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git tag -d v1.0
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Rename a local tag</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git tag NEW_TAG OLD_TAG
+</span><span class='line'>git tag -d OLD_TAG<span class="o">[</span>/bash<span class="o">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Delete a remote tag</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git push origin :refs/tags/v1.0
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Useful Git References</h2>
+
+<ul>
+<li><a href="http://learn.github.com">Learn.github</a></li>
+<li><a href="http://github.com/guides/git-cheat-sheet">Github&#8217;s git cheatsheet</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How gleeBox makes browsing the web faster and more fun]]></title>
+    <link href="http://ankit.github.io/blog/2010/01/28/how-gleebox-makes-browsing-the-web-faster-and-more-fun/"/>
+    <updated>2010-01-28T00:00:00-08:00</updated>
+    <id>http://ankit.github.io/blog/2010/01/28/how-gleebox-makes-browsing-the-web-faster-and-more-fun</id>
+    <content type="html"><![CDATA[<p><a href="http://thegleebox.com">gleeBox</a> started out as a weekend hack project for me and <a href="http://sameerahuja.com">Sameer</a>. But, we ended up spending a lot more time working on it. Not that I&#8217;m complaining, I think we managed to build a tool that is really useful once you get used to it. We made our last major release (<a href="http://thegleebox.com/releases">1.0</a>) a couple of weeks back. From now on, gleeBox development will be carried out at ease (and not the <a href="http://github.com/glee/glee">20 commits/day</a> rate at which it was being carried out earlier ^<sup>)</sup></p>
+
+<p>If you&#8217;re not familiar with gleeBox, you should take a look at this <a href="http://vimeo.com/7987369">screencast</a> or read the <a href="http://thegleebox.com/manual.html">user manual</a>.</p>
+
+<p>After continually using gleeBox for some time, I&#8217;ve discovered several ways in which it makes browsing and doing stuff on the web quicker and more fun.</p>
+
+<!-- more -->
+
+
+<h2>ESP Visions</h2>
+
+<p>This is my favorite feature of gleeBox. What this means is, you can specify <a href="http://api.jquery.com/category/selectors/">jQuery selectors</a> for specific URLs and when you visit that particular page and open gleeBox, that selector will automatically be executed and all the matching elements will be highlighted on the page. You can TAB through them and press enter to execute a link.</p>
+
+<p>This is especially useful on pages like the Google search results page, where all you would ever want to do is to go through the results. You don&#8217;t need to scroll using the mouse. This makes searching a lot more fun and less tiresome for the fingers.</p>
+
+<p>This is also really useful for automating stuff, especially for pages where you have to click the same link everytime you visit them.</p>
+
+<p>Several useful ESP Visions are listed on <a href="http://tipjar.thegleebox.com/category/esp/">TipJar</a>.</p>
+
+<h2>Default Link Search</h2>
+
+<p>You start typing something and gleeBox highlights all the links on the page that match the text. This means you don&#8217;t need to take your hands off the keyboard to navigate the web.</p>
+
+<h2>Page commands and bookmarklet execution</h2>
+
+<p>You can execute any bookmarklet by typing in [plain]!bookmarklet-name[/plain]. There are also some inbuilt-commands. A couple of examples are:</p>
+
+<p>Open the RSS feed of the current page in Google Reader so that you can easily subscribe to it</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>!rss</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Share current page through mail, gmail, facebook, twitter, etc.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>!share m / g / fb / t / ...</span></code></pre></td></tr></table></div></figure>
+
+
+<p>All of them are listed in the <a href="http://thegleebox.com/manual.html">user manual</a>.</p>
+
+<h2>Bookmark Search</h2>
+
+<p>If turned on, gleeBox searches browser bookmarks if no links are found matching the entered text. This is useful, instead of manually going through a long list of sites in the bookmarks menu.</p>
+
+<h2>Yubnub commands</h2>
+
+<p>You can execute <a href="http://yubnub.org">yubnub</a> or <a href="http://quixapp.com">quix</a> commands preceded by <code>:</code></p>
+
+<p>A couple of examples are:</p>
+
+<ul>
+<li>Search twitter for gleeBox</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>:tw gleebox</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Search IMDb for avatar</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>:imdb avatar</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Scraper commands</h2>
+
+<ul>
+<li>Select Linked Images</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>?img</span></code></pre></td></tr></table></div></figure>
+
+
+<p>You can also define custom scrapers. Example: This will select all shared links on twitter.com</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>?t - a.web</span></code></pre></td></tr></table></div></figure>
+
+
+<p>If you&#8217;re an advanced gleeBox user, you should go ahead and share tips on <a href="http://tipjar.thegleebox.com">Tipjar</a>. You can login using your Twitter / Facebook / other accounts and start posting right away from the main page.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[The mental catastrophe that is the social web]]></title>
+    <link href="http://ankit.github.io/blog/2009/10/04/the-mental-catastrophe-that-is-the-social-web/"/>
+    <updated>2009-10-04T00:00:00-07:00</updated>
+    <id>http://ankit.github.io/blog/2009/10/04/the-mental-catastrophe-that-is-the-social-web</id>
+    <content type="html"><![CDATA[<p>I may sound a bit like a hypocrite, being myself involved in so many <a href="http://en.wikipedia.org/wiki/Social_network">social networks</a> and the <a href="http://en.wikipedia.org/wiki/Social_web">social web</a>. But, my mind has finally come to the standpoint that it cannot keep up with all the bucket loads of useless information that I put it through daily. Starting today, I will be limiting the use of social networks that seem to serve no useful purpose for me which mostly includes Facebook and Orkut.</p>
+
+<!-- more -->
+
+
+<p>I&#8217;ve deleted my Wakoopa account (sorry Wakoopa!), since I didn&#8217;t see it help me in any way besides maybe me taking a look at it every now and then to look at an abstract graph of how I spent my last week on the computer.</p>
+
+<p>I am not going to all together delete my Facebook or Orkut accounts since they let me stay in touch with friends with whom I&#8217;m not in touch with in real (non-internet) life and share stuff ( photos, links, etc. ) with friends with whom I am in touch with in real life. I would instead be limiting my use of both these social networks to a trickle. At least that&#8217;s the plan.</p>
+
+<p>It wasn&#8217;t until I heard Conan O&#8217;Brien joke around about the &#8221;<em><a href="http://en.wikipedia.org/wiki/Attention-deficit_hyperactivity_disorder">attention deficit disorder</a></em>&#8221; on The Tonight Show that I realised that I was actually suffering from a minor form of it. One of the culprits is Twitter, where one follows so many people that it actually pushes you to skip through information. I will gradually start to unfollow people who create a lot of noise and tend to feed my habit of ignoring information. I&#8217;m also going to avoid running a Twitter client in the background ( in my case, Tweetie ). On a more positive note, Twitter, for me, is useful to keep up to date with the latest news in areas of my choice ( Design and Technology ) and have conversations with interesting people on the Web. And yes, ofcourse, it lets me rant about me.</p>
+
+<p>Google Reader and Friendfeed are useful and almost my main sources of news and information (along with Twitter) and since I use them in proportion, they don&#8217;t really hinder me. I like Last.fm as it allows me to listen to its radio and I&#8217;m not addicted to it so it doesn&#8217;t eat up my productivity.</p>
+
+<p>So, what led me to the brink? Over the past few weeks, I had been overtly commenting on Facebook and checking my Gmail. It made me realise how much time and energy I was wasting doing nothing.
+Then, I asked myself the following questions about each social app I use frequently:</p>
+
+<ul>
+<li>Does it generate content that is meaningful and useful to me?</li>
+<li>Does it connect me with people who are interesting and like-minded to me?</li>
+<li>Is it a time-sucker?</li>
+<li>Does it make me less productive?</li>
+</ul>
+
+
+<p>Social Web does have a lot of Pros in favor of it, that is if you keep your usage in check.</p>
+
+<ul>
+<li>It allows you to have conversations with interesting and like-minded people on the Web, no matter where they may be physically located, eventually expanding your intellectual horizons.</li>
+<li>It lets you stay up-to-date with what is happening in the world.</li>
+<li>It allows you to collaborate with other people on creative projects.</li>
+<li>It lets you create your own individual presence on the web.</li>
+<li>It allows you to share content with your friends and family.</li>
+</ul>
+
+
+<p>If kept under a check, the social web will continue to be useful to everyone instead of making everyone unproductive. So, if I don&#8217;t reply to your Orkut scrap or Facebook comment, and if it is really important, @reply me on Twitter or email me.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Installing the Front End Editor extension on Joomla 1.5]]></title>
+    <link href="http://ankit.github.io/blog/2009/10/01/installing-the-front-end-editor-extension-on-joomla-1-5/"/>
+    <updated>2009-10-01T00:00:00-07:00</updated>
+    <id>http://ankit.github.io/blog/2009/10/01/installing-the-front-end-editor-extension-on-joomla-1-5</id>
+    <content type="html"><![CDATA[<p>Many of you already know that I created the “<strong>Front End Editor</strong>” a.k.a &#8221;<strong>Enhanced Front End Editing</strong>&#8221; extension for Joomla! as part of Google Summer of Code 2009. The extension only works in 1.5.x right now. Even though I tried to make it easy to adopt the extension by making it easy to setup, the extension does rely on the template quite a bit. I thought if I explain the installation process, all the hacks the extension makes and the underlying dependencies in a blogpost, it should help in getting rid of confusion to some degree.</p>
+
+<p>You can download the <a href="http://extensions.joomla.org/extensions/news-production/content-submission/9838">extension</a> from JED.</p>
+
+<!-- more -->
+
+
+<h2>Installation</h2>
+
+<ol>
+<li><p>Install <strong>com_frontendeditor</strong>, <strong>plg_frontendeditor</strong> and <strong>plg_articleeditor</strong> from <a href="http://joomlacode.org/gf/project/frediting/frs/?action=FrsReleaseBrowse&amp;amp;frs_package_id=4870">here</a>.</p></li>
+<li><p>Enable the plugins “System - Frontend Editor” and “Content - Frontend Article Editor”.</p></li>
+<li><p>Go to <strong>Components -> Enhanced Frontend Editor</strong> at the backend and click on <strong>Apply Changes</strong>. You can modify the settings there to suit your template and needs.</p></li>
+</ol>
+
+
+<h2>Hacks (applied when you click on <strong>Apply Changes</strong>)</h2>
+
+<ol>
+<li><p>Adds the module chrome <code>modChromefreditor</code> to the <code>html/modules.php</code> file of the current template. Before doing this, it creates a backup file <code>html/modules.php.backup</code>.</p></li>
+<li><p>After creating a backup of <code>index.php</code> as <code>index.php.backup</code>, it modifies the following statements in the “index.php” of the current template:</p>
+
+<ul>
+<li><p>All the jdoc statements get the style <code>freditor</code>.</p>
+
+<p>  Example:</p>
+
+<p>  <code>
+  &lt;jdoc:include type='modules' name='top'&gt;
+ </code></p>
+
+<p>  gets changed into</p>
+
+<p>  <code>
+  &lt;jdoc:include type='modules' name='top' style='freditor'&gt;
+ </code></p></li>
+<li><p>Surrounds the jdoc statements with a <code>div</code> that has a class in the format <code>frpos.position-name</code>.</p>
+
+<p>  Example:</p>
+
+<p>  <code>
+  &lt;jdoc:include type='modules' name='user3' style='freditor'&gt;
+ </code></p>
+
+<p>  gets changed into</p>
+
+<p>  <code>
+  &lt;div class='frpos.user3'&gt;&lt;jdoc:include type='modules' name='user3' style='freditor'&gt;&lt;/div&gt;
+ </code></p></li>
+<li><p>Replaces the existing <code>/html/com_content/article/form.php</code> with a custom <code>form.php</code>, after creating a backup &#8211; <code>form.php.backup</code>.</p></li>
+</ul>
+</li>
+</ol>
+
+
+<p>The backup files are created so that you can undo the changes anytime by clicking on <strong>Revert Changes</strong>. You should revert the hack if you choose to uninstall the extension.</p>
+
+<p>You’ll also need to apply the hack separately for each template you want to use.</p>
+
+<h2>Dependencies and Limitations</h2>
+
+<ul>
+<li><p><strong>Mootools 1.2</strong>
+  Perhaps the biggest limitation of this extension is that it uses mootools 1.2 instead of 1.1 which is used in Joomla! 1.5. Consequently, some of your javascript that uses mootools 1.1 may not work properly when you’re logged in. Mootools 1.2 will only replace 1.1 when you’re logged in at the front-end and have the plugins enabled. The reason I chose 1.2 is that Joomla! 1.6 will use mootools 1.2.</p></li>
+<li><p><strong>Menu-item title editing</strong>
+  The menu-item titles must be enclosed in LI elements with the class in format <code>item&lt;menu-id&gt;</code>. Example:</p>
+
+<p>  <code>
+  &lt;li class='item13'&gt;&lt;span&gt;Joomla! Documentation&lt;/span&gt;&lt;/li&gt;
+ </code></p>
+
+<p>  If your template uses a different layout, you may want to modify it a little to support menu-item title editing. In case you don’t, you need not worry as each of these features degrade gracefully, without affecting the functionality or presentation of your site.</p></li>
+<li><p><strong>Default article edit icons are hidden</strong>
+  The default edit icons are hidden and the extension displays its own edit icons. You can specify their selector in the admin component. In case your template uses a different selector than the default one and you don’t specify it, a pair of edit icons can appear for each article which will lead to confusion.</p></li>
+<li><p><strong>Selectors for article and page titles</strong>
+If they are not the default, you can modify them in the admin so that editing of article and page titles works.</p></li>
+</ul>
+
+
+<h2>Future Versions</h2>
+
+<p>You can report any bugs <a href="http://joomlacode.org/gf/project/frediting/tracker/?action=TrackerItemBrowse&amp;amp;tracker_id=9019">here</a>. Since my college semester has now begun, any updates to the extension will probably come slowly. I plan to remove any trivial withstanding bugs, add new features with time and improve the extension in general. I would love to spend any free time in fixing bugs of the overall Joomla! project as well.</p>
+
+<p>As far as Joomla! 1.6 is concerned, I did create a patch for 1.6 but due to time constraints, it wasn’t included in the feature-set for 1.6. So, when a stable version of 1.6 is released, I’ll port this extension to support 1.6.</p>
+
+<p>I will love to know if the extension worked for you and any suggestions or feedback you want to give. You can either contact me via the <a href="http://ankitahuja.com/contact">Contact page</a> or send me an <a href="http://twitter.com/ahujaankit">@reply</a> on Twitter.</p>
+
+<p><strong>Update</strong></p>
+
+<p>This is a common recurring problem for version 0.3.7 of the extension. If you&#8217;re getting the following error:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Parse error: syntax error, unexpected '&', expecting T_VARIABLE or '$'
+</span><span class='line'>in your-install/administrator/components/com_frontendeditor/controller.php
+</span><span class='line'>on line 99</span></code></pre></td></tr></table></div></figure>
+
+
+<p>it means you&#8217;re probably using a version of PHP earlier than 5. Unfortunately, this piece of code only works in PHP 5. You&#8217;ll either need to update to PHP 5 or get the patch from <a href="http://joomlacode.org/gf/download/frsrelease/11233/44798/99line.patch">here</a>. You&#8217;ll need to apply the patch to <code>your-install/administrator/components/com_frontendeditor/controller.php</code>.</p>
+
+<p>In case you&#8217;re not familiar with applying a patch, you&#8217;ll have to execute the following command from the shell:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>patch -p1 -i 99line.patch controller.php</span></code></pre></td></tr></table></div></figure>
+
+
+<p>If you&#8217;ve issues, even though I am not maintaining the extension, you can email me at ahuja DOT ankit AT gmail DOT com.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Twitkut v2.0 to be an OAuth Gadget]]></title>
+    <link href="http://ankit.github.io/blog/2009/09/28/twitkut-v2-0-to-be-an-oauth-gadget/"/>
+    <updated>2009-09-28T00:00:00-07:00</updated>
+    <id>http://ankit.github.io/blog/2009/09/28/twitkut-v2-0-to-be-an-oauth-gadget</id>
+    <content type="html"><![CDATA[<p>I&#8217;ve been working on the next version of Twitkut in whatever little free time I&#8217;ve had in the past couple weeks ( mostly weekends ). The next version of Twitkut will feature a number of new and exciting features, the most major one being support for OAuth. <!-- more --></p>
+
+<h2>Displaying user tweets in the Orkut profile page</h2>
+
+<p>I had to rewrite the whole code for this due the new <a href="http://orkutdeveloper.blogspot.com/2009/05/posted-by-rahul-kulkarni-product.html">server-side templates and data-pipelining standards enforced by Orkut</a>. It has certain limitations in that you cannot click on any link that links to any external source. Clicking on the user&#8217;s pic or username leads you to the application page.</p>
+
+<h2>OAuth Support</h2>
+
+<p>Twitkut will now enable you to authorize it with your Twitter account via OAuth. Doing this will enable you to post updates from Twitkut, add your Orkut friends as your Twitter friends and many more things (listed as separate features). I chose OAuth since then you won&#8217;t have to worry about me storing your Twitter passwords.</p>
+
+<h2>Post updates from Twitkut</h2>
+
+<p>If you enable OAuth, you&#8217;ll be able to post updates to your Twitter account from within Twitkut.</p>
+
+<h2>Follow your Orkut friends on Twitter</h2>
+
+<p>Enabling OAuth will enable you to follow your Orkut friends on Twitter from within Twitkut.</p>
+
+<h2>Selective Updates</h2>
+
+<p>This will be similar to the &#8220;Selective Twitter Updater&#8221; Facebook app. You will able to selectively display updates on Twitkut by adding a hashtag to the end of updates similar to &#8220;#orktw&#8221; or &#8220;#orkut&#8221;. I&#8217;ve still to decide upon the hashtag. Only the updates containing the hashtag will be displayed on Twitkut.</p>
+
+<p>Unfortunately, the popular demand for automatic updates to the user&#8217;s activity stream ( without the user having to visit the application page ) won&#8217;t be possible due to the limitations enforced by Orkut. If Orkut ever allows it, it&#8217;ll be the first feature I&#8217;ll add.</p>
+
+<p>I cannot promise if and when I&#8217;ll add all these features. There are too many variables, time being the biggest one. You can keep abreast with the latest updates to Twitkut by following <a title="Twitkut on twitter" href="http://twitter.com/twitkut">@twitkut</a>.</p>
+
+<p>You can also suggest features that you&#8217;ll like to be added to Twitkut as comments to this blogpost or as @replies to <a title="Twitkut on twitter" href="http://twitter.com/twitkut">@twitkut</a>.</p>
+
+<p>Enabling Twitkut with OAuth has been/will be a complicated task. I&#8217;ll probably write a separate blog on writing an Opensocial OAuth Gadget.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Short movie on the Mussoorie-Rishikesh Trip]]></title>
+    <link href="http://ankit.github.io/blog/2009/09/24/short-movie-on-the-mussoorie-rishikesh-trip/"/>
+    <updated>2009-09-24T00:00:00-07:00</updated>
+    <id>http://ankit.github.io/blog/2009/09/24/short-movie-on-the-mussoorie-rishikesh-trip</id>
+    <content type="html"><![CDATA[<p>I created a short movie out of the still pics of our stay at Mussoorie and Rishikesh. A pinch of creativity and a couple of hours of work went into the creation/direction of this movie. Hope you like it!</p>
+
+<p>The music used in the movie (in the same order):</p>
+
+<ul>
+<li>Eye of the tiger - <em>Scorpions</em></li>
+<li>Bebot - <em>Black Eyed Peas</em></li>
+<li>The Hill - <em>Markéta Irglová</em></li>
+<li>Enter Sandman - <em>Metallica</em></li>
+</ul>
+
+
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="504" height="277" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowfullscreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="src" value="http://vimeo.com/moogaloop.swf?clip_id=6731919&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=00ADEF&amp;fullscreen=1" /><embed type="application/x-shockwave-flash" width="504" height="277" src="http://vimeo.com/moogaloop.swf?clip_id=6731919&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=00ADEF&amp;fullscreen=1" allowscriptaccess="always" allowfullscreen="true"></embed></object>
+
+
+<p></span><a href="http://vimeo.com/6731919">Mussoorie-Rishikesh &#8216;09 Trip</a> from <a href="http://vimeo.com/user361614">Ankit Ahuja</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Back after an amazing trip to Mussoorie and Rishikesh]]></title>
+    <link href="http://ankit.github.io/blog/2009/09/21/back-after-an-amazing-trip-to-mussoorie-and-rishikesh/"/>
+    <updated>2009-09-21T00:00:00-07:00</updated>
+    <id>http://ankit.github.io/blog/2009/09/21/back-after-an-amazing-trip-to-mussoorie-and-rishikesh</id>
+    <content type="html"><![CDATA[<p>This previous weekend from 18th to 20th September was probably the most fun and adventure I have had for quite a while. While I was on leave from college on Thursday, my college friends were planning a trip to Mussoorie via Haridwar and Rishikesh for the weekend. After much vacillation from everyone, 5 of us finally decided that we were going to the trip! Part of the fun was that the final decision was made just hours before the actual trip began. So, none of us had any time to really think about the beautiful weekend that awaited us.</p>
+
+<!--more-->
+
+
+<p><img class="center" src="http://ankit.github.io/images/posts/m-trip/1.jpg"></p>
+
+<p>We began our journey early morning on Friday. The plan had changed a bit, we were now going to Mussoorie and possibly Haridwar and Rishikesh on the way back. It was also ironic that the route to Mussoorie went scarily close to our college. We had a chance to kiss it goodbye and see what it felt like. Trust me, it felt very good to actually see everything you&#8217;ve learned to hate pass you by.</p>
+
+<p>When we were about to enter Uttarakhand, the state to which Mussoorie belongs, we suddenly got pings from everywhere that our University Result had been announced. At first, we were resolute and decided that we will check our result after we came back. But then, one of us was too eager and he checked his result. And guess what, he got a very good result and then we were all scampering for our mobile phones to know our results via SMS. A couple of us had to wait a wee bit longer ( Jatin and Vishal ). But we all now had a reason to celebrate. All of us had got a decent result!</p>
+
+<p><img class="center" src="http://ankit.github.io/images/posts/m-trip/2.jpg"></p>
+
+<p>Thanks to someone really awesome, we got a chance to stay at the ITM Hostel in Mussoorie. It is located right at the top in a very scenic place. The most wonderful thing about the place was the silence. All we could hear was the wind and our voices. It was the peacefulness any city inhabitant could only dream of. Our trip had now officially touched its first milestone that was to reach Mussoorie. We visited Mall road, had dinner at Udupi (a south indian restaurant) and I increased my winning streak in Air hockey by +1. We then had hot tea at the hostel and I slept the most peaceful sleep I had had for a while, without all the traffic noises and dog barks.</p>
+
+<p>The next morning was beautiful. Abhishek and I decided to go out for an early morning self-professed hike. After walking along the road for a bit, we took a kuccha path into the valley. It was the pleasant feeling of adventure that I&#8217;ve always loved. It felt like it had been picked right out of a Ruskin Bond story.</p>
+
+<p><img class="center" src="http://ankit.github.io/images/posts/m-trip/3.jpg"></p>
+
+<p>That day we decided we were going to go to the Kempty Falls. We went there and took a dip into the chilly water. It was refreshing and fun. We then made our way to Company Park. It was beautiful and I got a chance to practice my photography skills. After that, we made a short tour to Gun Hill. Unfortunately, it was foggy and so we didn&#8217;t get to see much. We did, however, get a chance to practice our shooting skills. Tired after a third of the day, only Vishal and I had the will to walk the entire length of the Camel Back Road. And boy, was it worth it. It was the most scenic and peaceful walk I have ever undertaken. Luckily, the clouds drifted away for a bit and we had a chance to glimpse the amazing landscape of Mussoorie. While on our way back to our cab via Mall road, we also saw a Sikh procession. It ran the entire length of Mall road and we saw the talented students of schools in Mussoorie march and play music. We gave a visit to the almighty and headed back to the hostel. Our stay at Mussoorie was nearing an end.</p>
+
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="425" height="344" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowFullScreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="src" value="http://www.youtube.com/v/oHPzMG5qkfM&amp;hl=en&amp;fs=1&amp;rel=0" /><param name="allowfullscreen" value="true" /><embed type="application/x-shockwave-flash" width="425" height="344" src="http://www.youtube.com/v/oHPzMG5qkfM&amp;hl=en&amp;fs=1&amp;rel=0" allowscriptaccess="always" allowfullscreen="true"></embed></object>
+
+
+<p>The next day we all woke up early and got ready to go to Rishikesh. The journey was a sleepy downhill ride across Dehradun to Rishikesh. We then took a bath in the Ganges. It was wonderful! We had breakfast at Chotiwala and headed back. After another round of dwindling decision making and heading in the opposite direction, we decided that 4 of us were keen to go rafting. All of us are glad now that we made the right decision. It was the dash of adventure that our getaway had always needed.</p>
+
+<p><img class="center" src="http://ankit.github.io/images/posts/m-trip/4.jpg"></p>
+
+<p>Our awesome instructors guided us through the whole rafting experience. We rafted in still water as well as rapids and whirlpools. We even took a dip in the middle of the river! At the end, we were all pretty tired after covering a distance of 12 kms, but the tiredness felt good.</p>
+
+<p>It was then the way back home. Our only stops were some fried maggi at Roorkee and dinner at Chital.</p>
+
+<p>Now, it is back to the daily drag that is normal life. I wish my home was in Mussoorie. I wish my academic institution was in Mussoorie. I wish I get to stay at a place as scenic and beautiful as Mussoorie on a permanent basis. I wish I could&#8217;ve lived the adventure longer. But, for now, I&#8217;ll hang on to the memories and make it through the monotony of life until the next adventure!</p>
+
+<p>You can take a look at the photos of our trip over at <a href="http://www.facebook.com/ankitahuja?v=photos&amp;ref=photos" target="_blank">Facebook</a> or <a title="Pics at Flickr" href="http://www.flickr.com/photos/ankitahuja/sets/72157622423084458/">Flickr</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[I'm in! #GSoC]]></title>
+    <link href="http://ankit.github.io/blog/2009/04/27/im-in-gsoc/"/>
+    <updated>2009-04-27T00:00:00-07:00</updated>
+    <id>http://ankit.github.io/blog/2009/04/27/im-in-gsoc</id>
+    <content type="html"><![CDATA[<p><img class="center" src="http://img.skitch.com/20090427-xyg7mbts5aannc9g3c5wk5cysa.jpg"></p>
+
+<p>Yes, I&#8217;m in (<em>yay!</em>) and I will be participating in <a href="http://socghop.appspot.com/">Google Summer of Code</a> this year with <a href="http://www.joomla.org">Joomla!</a> For those of you who don&#8217;t know what Joomla! is, it is a Content Management System (CMS) used widely to create and manage websites. I will be working on an <a href="http://forum.joomla.org/viewtopic.php?f=231&amp;amp;t=396033">Enhanced front-end editor</a> for Joomla! <a href="http://coolbung.blogspot.com/">Ashwin</a> will be mentoring me for the summer.</p>
+
+<!-- more -->
+
+
+<p>I am thankful to <a href="http://sameerahuja.com">Sameer</a> for inspiring me to take part in GSoC. I also thank <a href="http://twitter.com/ElinWaring">Elin</a>, <a href="http://pasamio.id.au/">Sam</a>, <a href="http://community.joomla.org/magazine/author/57-toni-marie.html">Toni</a> and all the other mentors and <a href="http://community.joomla.org">community</a> of Joomla! for helping me better my application into something practical and at the same time useful. It has been a great experience interacting with the Joomla! community for the past 1 - 2 months and that is something that has really inspired me to work on the project.</p>
+
+<p>Things have been moving very quickly since I <a href="http://twitter.com/ahujaankit/status/1567978777">got to know</a> that I got selected on 21st April at 12:30 am. But, the journey has just begun. I will be coding this coming summer to complete my project and to validate my selection. At present, I have been getting myself familier with the Joomla! framework, finalizing the implementation details of my project as well as sorting out a few issues in my mind. I plan to give my best effort to the project so that it becomes a useful feature for all Joomla! users.</p>
+
+<p>I see this as a terrific opportunity to work in collaboration with talented people from all over the world. I see now why people love open source so much. It feels great to be a part of the Joomla! as well as the opensource community and to contribute to a project that is used by so many users.</p>
+
+<p>My heartiest congratulations to everyone who got selected for Summer of Code. You can have a look at the list of students who got selected for Joomla! here: <a href="http://socghop.appspot.com/org/home/google/gsoc2009/joomla">http://socghop.appspot.com/org/home/google/gsoc2009/joomla</a>.</p>
+
+<p>This post&#8217;s title makes my obsession with use of hash-tags in twitter updates pretty clear ;)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[ProxyCal, a webapp built out of personal needs]]></title>
+    <link href="http://ankit.github.io/blog/2009/03/07/proxycal/"/>
+    <updated>2009-03-07T00:00:00-08:00</updated>
+    <id>http://ankit.github.io/blog/2009/03/07/proxycal</id>
+    <content type="html"><![CDATA[<p><img class="center" src="http://img.skitch.com/20090305-rr5sgy2jy7gbeie8hu7ssxfh9b.jpg"></p>
+
+<p>My college wanted us to do a project as part of a &#8221;<strong>Bridge Course</strong>&#8221; this semester. In a way, I liked the concept as it was at least trying to convince some people to do something besides curriculum. Personally, it&#8217;s always good when you are working towards some objective like completing a project you have to submit. An example is last summer, when I had to create a project for the summer and I ended up doing a lot of fun stuff.</p>
+
+<!--more-->
+
+
+<p>So, I thought, why not build a solution for a problem I have been facing for quite some time now. Those of you who know me personally or follow me on twitter, know that I am particularly unhappy about my college&#8217;s attendance criteria. It&#8217;s always been a headache for me trying to keep track of when I went to college and when I didn&#8217;t. I tried using <a href="http://calendar.google.com">Google Calendar</a> but I thought it was pretty cumbersome to use for this particular purpose.</p>
+
+<p>So, I thought, why not create a simple, easy-to-use and nice-looking webapp for exactly this purpose. That&#8217;s when ProxyCal was born. Even at the beginning, I had the idea in my mind of a calendar which used colors like green, red and yellow to denote the status for the day i.e. whether you went to college, took a leave or college was off. One more thing I wanted to do was to avoid anyone from creating a new account for using ProxyCal. So, I decided that I was going to store all the data regarding the attendance in a separate calendar &#8216;ProxyCal&#8217; in the user&#8217;s Google Calendars.</p>
+
+<p>So, all you need to use ProxyCal is to have a Google Account. This simplified things to quite an extent form the development point of view as it avoided me from maintaining a separate database for tracking a user&#8217;s attendance. I wanted my app to be <em>ajaxy</em> so I used the <a href="http://code.google.com/apis/calendar/docs/1.0/developers_guide_js.html">Google Calendar JavaScript API</a> which meant I didn&#8217;t have to go through the tedious process of making XMLHTTPRequests to a proxy on my server which in turn used the Google Calendar Data API.</p>
+
+<p>The entire app is almost completely developed using JavaScript. There is a bit of PHP to store some settings related data.</p>
+
+<p>Some of the fun and useful features of ProxyCal are:</p>
+
+<ol>
+<li><p>By default, it assumes you went to college on weekdays and college was off on weekends i.e Sat and Sun. This means, when you visit the app after some time, it automatically assigns the default statuses to the previous days in the month.</p></li>
+<li><p>It uses the following color scheme:</p>
+
+<ul>
+<li>Green - You went to college</li>
+<li>Red - You took a leave</li>
+<li>Yellow - College was Off</li>
+</ul>
+</li>
+<li><p>It allows you to set the cutoff percentage i.e. what percentage of attendance you are supposed to meet on a monthly basis.</p></li>
+<li><p> It also gives you an estimate of the no. of days you can take a leave in the current month.</p></li>
+<li><p>You can edit the status for any day by simply clicking on it. It display&#8217;s a popup where you can simply set the new status.</p></li>
+</ol>
+
+
+<p>For those of you wondering where the name came from, it does have some logic behind it. This app, in essence, assumes that once you went to college you either attended all the lectures or atleast had someone call a proxy for you :)
+You cannot set attendance for all lectures separately. That would have made the app a little too complicated which was exactly the opposite of what I was striving to achieve.</p>
+
+<p><a href="http://ankitahuja.com/apps/proxycal">ProxyCal</a> is currently in beta. That means I am still working on it. Here are some features I would be adding soon:</p>
+
+<ul>
+<li><p>Ability to store your weekly timetable so that it can give you an estimation of your attendance in each subject.</p></li>
+<li><p>A screencast demonstrating use of ProxyCal. Even though it is very simple to use.</p></li>
+<li><p>Ability to download a PDF of the attendance log for any selected time period.</p></li>
+<li><p>ProxyCal does not work on Internet Explorer.</p></li>
+</ul>
+
+
+<p>I have developed ProxyCal in an agile manner. I wanted to get it done quickly for two reasons. One, I couldn&#8217;t wait to start using it :). Also, I have to look up things for the coming summer so I don&#8217;t want to be stuck up on what I already know how to do.</p>
+
+<p>And so, Proxycal is another example of an app I have built as a result of my personal needs. Maybe in future, I may think about creating something (similar to ProxyCal) which will be useful for a wider audience, like highlighting deadline for events.</p>
+
+<p>You can start using ProxyCal by going here : <a href="http://ankitahuja.com/apps/proxycal">http://ankitahuja.com/apps/proxycal</a></p>
+
+<p>And as the footer of this app so prominently says,</p>
+
+<blockquote>&#8220;Thou shall not run short on attendance ever again!&#8221;</blockquote>
+
+
+<p>Here is a screenshot:</p>
+
+<p><img class="center" src="http://img.skitch.com/20090305-c38u4w7qwgnpgau8r45ukig84f.jpg"></p>
+
+<p>Feel free to suggest any features or report back any bugs or just comment. You can use the feedback tab on the left on the app page for this purpose.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Twitkut Usage Stats]]></title>
+    <link href="http://ankit.github.io/blog/2009/01/07/twitkut-usage-stats/"/>
+    <updated>2009-01-07T00:00:00-08:00</updated>
+    <id>http://ankit.github.io/blog/2009/01/07/twitkut-usage-stats</id>
+    <content type="html"><![CDATA[<p>Uptil now, the only way I had to keep track of Twitkut was the Google Gadget Directory, which still shows that it has &lt;100 users. At the time I developed the app, Google Analytics was broken.</p>
+
+<p>I have an Orkut filter setup on my Gmail, so that all the emails notifying me of scraps skip the Inbox. Today, however, I decided to check my Orkut emails. And guess what, the first mail I saw was from the Orkut guys giving me the weekly statistics of my Opensocial application!</p>
+
+<!-- more -->
+
+
+<p>Here it is:</p>
+
+<p>Here are the statistics for your OpenSocial app <a href="http://www.ankitahuja.com/apps/orkut/twitter.xml" target="_blank">twitter.xml</a> on orkut for the week of 2008/12/30: </p>
+
+<ul>
+<li>App submitted to orkut on 2008/11/04</li>
+<li>Number of unique users who installed the app this week: <strong>77</strong></li>
+<li>Total number of unique users who currently have the app installed: <strong>532</strong></li>
+<li>Number of times profile pages of users who have installed this app were viewed: <strong>16395</strong></li>
+<li>Number of times this app was viewed in canvas view: <strong>446</strong></li>
+</ul>
+
+
+<p>Wow, and until now I thought that less than 100 users were using my application!</p>
+
+<p>I think the Orkut team only recently started mailing developers weekly stats. I think it&#8217;s a great idea and hopefully they will continue to do so.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[My Twitter Wordle]]></title>
+    <link href="http://ankit.github.io/blog/2009/01/06/my-twitter-wordle/"/>
+    <updated>2009-01-06T00:00:00-08:00</updated>
+    <id>http://ankit.github.io/blog/2009/01/06/my-twitter-wordle</id>
+    <content type="html"><![CDATA[<p><img class="center" src="http://ankit.github.io/images/posts/twitter-wordle.jpg"></p>
+
+<!--more-->
+
+
+<p>I already tweeted about this but I thought this was exciting enough to deserve a mention on my blog. Also, now that I have a decent no. of followers on Twitter, I am hopeful that more people would be reading this blogpost. So, hello tweeps!</p>
+
+<p>Only recently, I came across <a href="http://www.thestatbot.com">TheStatBot</a>. I really liked the idea of twitter wordles, like mine above. It gives you a quick refresh on what the person talks about on twitter. If you look for more than a minute on my Twitter wordle above, you can sum up that I usually talk about cool apps, twitter(ofcourse), India, API&#8217;s, design, college etc. If you look deeper into the cloud, you will know that I have talked about twitkut, Internet, Mac, last.fm, coffee, firefox, etc.</p>
+
+<p>It wasn&#8217;t exactly a very smooth process to come up with it, though. At first, I tried using my twitter RSS feed on <a href="http://www.wordle.net">wordle.net</a>. That didn&#8217;t work, as it then only considered my recent 20 or so tweets. What I wanted was that it should span across all my tweets. Then, I came across a python script created by <a href="http://blog.yuvisense.net/">Yuvi Panda</a> that simply takes all your tweets (maximum 3200 are allowed by the twitter API) and puts them into a txt file. You can simply then copy all the text and use it on wordle.net.</p>
+
+<p>I am pretty certain there is room for a webapp for this. If only wordle had an API. I believe <a href="http://www.thestatbot.com">TheStatBot</a> is working on extending wordles to services like FriendFeed, etc.</p>
+
+<p><strong>Update:</strong></p>
+
+<p>You can checkout the script using svn:</p>
+
+<p><code>svn checkout http://goodfather.googlecode.com/svn/trunk/GoodFather/MonaN</code></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Twitter + Orkut = Twitkut]]></title>
+    <link href="http://ankit.github.io/blog/2008/11/13/twitkut/"/>
+    <updated>2008-11-13T00:00:00-08:00</updated>
+    <id>http://ankit.github.io/blog/2008/11/13/twitkut</id>
+    <content type="html"><![CDATA[<p><img class="center" src="http://ankit.github.io/images/posts/twitkut/1.png"></p>
+
+<p>I use <a title="Twitter" href="http://twitter.com" target="_blank">Twitter</a> a lot. Unfortunately, almost all of my real life friends are only on <a title="Orkut" href="http://www.orkut.com" target="_blank">Orkut</a>. Most of them haven&#8217;t even heard of Twitter. That&#8217;s how I came up with the idea of creating something like Twitkut.</p>
+
+<!-- more -->
+
+
+<p>I update frequently on Twitter. So, I thought how cool will it be if somehow all my Orkut friends can also read them from Orkut itself. That will mean they will not have to register on Twitter to follow me and get updates.</p>
+
+<p><a title="Twitkut" href="http://bit.ly/twitkut" target="_blank">Twitkut</a> displays your recent tweets on your Orkut profile page. Besides, it also shows you which all of your friends are using Twitkut so that you can follow them. It also allows you to post updates to your twitter account from within Orkut using OAuth.</p>
+
+<p><img class="center" src="http://ankit.github.io/images/posts/twitkut/2.png"></p>
+
+<p><img class="center" src="http://ankit.github.io/images/posts/twitkut/3.png"></p>
+
+<p>It makes use of <a href="http://code.google.com/apis/opensocial/" target="_blank">Google&#8217;s OpenSocial JavaScript API</a> as well as <a href="http://apiwiki.twitter.com/Search+API+Documentation" target="_blank">Twitter&#8217;s Search API</a> to access the tweets.</p>
+
+<p>OpenSocial is still pretty nescient, especially if you have seen the Facebook API. I was pretty dissappointed at times with the lack of features in the API. For eg., a chief functionality of my app would have been to update the status of the Orkut user with his/her latest tweet. But, the API didn&#8217;t allow it.</p>
+
+<p>Also, to post an update to a user&#8217;s activity stream, the owner of the app must visit their profile page or the Twitkut application. This makes it impossible to automatically poll for new tweets and post them to a user&#8217;s activity stream. Maximum 2 updates are allowed to a user&#8217;s activity stream in a day.</p>
+
+<p>Another feature OpenSocial currently lacks is that there is no way for the developer to keep track of who or how many users are using his application. I feel this should have been one of the first features that should have been implemented in the API, to allow developers to see analysis of their app usage from within Orkut.</p>
+
+<p>There was one more thing that made me cringe. The Orkut sandbox allows using Opensocial 0.8 api whereas prod.sandbox.orkut.com as well as orkut.com only allow Opensocial 0.7 at this point of time. Nowhere did they mention this loud and clear. So, I ended up making the app using Opensocial 0.8. Then I got to know that I had to use Opensocial 0.7 if I wanted to submit my app to Orkut ( of course that&#8217;s the reason I am developing the app ) and so I had to make some redundant changes all over again.</p>
+
+<p>On the brighter side, I was very happy with the response at the <a href="http://groups.google.com/group/opensocial-orkut" target="_blank">Orkut Developer Forum</a>. Jason and others helped me along the way and were kind enough to answer all my queries. Without their help, I would certainly have been unable to develop this app. It also cleared some of my concepts regarding caching, etc.</p>
+
+<p>All in all, I am pretty happy with the final result. I have received nice feedback from people who have already started using Twitkut.</p>
+
+<p>So, if you use Orkut and you are a Twitter crazy person and want to share your tweets with a wider world, you can add the application by going <a title="Twitkut" href="http://bit.ly/twitkut" target="_blank">here</a>.</p>
+
+<p><strong><span style="font-weight: normal;">Follow updates on development: </span><a href="http://twitter.com/twitkut" target="_blank">@twitkut</a></strong></p>
+
+<p><strong><span style="font-weight: normal;">Follow me: <a href="http://twitter.com/ahujaankit" target="_blank"><strong>@ahujaankit</strong></a></span></strong></p>
+
+<p><strong>Update</strong>: Twitkut is now visible in Orkut profiles. The profile view will improve gradually. This is after Twitkut was temporarily not visible on Orkut profiles as the <a href="http://orkutdeveloper.blogspot.com/2009/05/posted-by-rahul-kulkarni-product.html" target="_blank">profile view had to re-built using OPML</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[PollBol, a Polling Web App]]></title>
+    <link href="http://ankit.github.io/blog/2008/10/22/pollbol/"/>
+    <updated>2008-10-22T00:00:00-07:00</updated>
+    <id>http://ankit.github.io/blog/2008/10/22/pollbol</id>
+    <content type="html"><![CDATA[<p><img class="center" src="http://ankit.github.io/images/posts/pollbol/1.png"></p>
+
+<p><strong>Update</strong>: PollBol is currently down due to server deployment issues. Take a look at the <a href="#pollbol_screenshots">screenshots</a> instead.</p>
+
+<p>Pollbol is an exciting web app that adds a twist to conventional polling by adding an additional social aspect to it. After making <a href="http://ankitahuja.com/apps/lastfm">FriendComparé</a>, which was a mashup making use of the <a href="http://last.fm">Last.fm</a> API, I wanted to make a more independent app that maintained its own data.</p>
+
+<!-- more -->
+
+
+<p>Even so, I fully support the idea of making use other apps&#8217; APIs. It makes it easier for the users to adopt since it builds on the functionality of the more popular app. And so, FriendComparé has had comparatively far more visitors as compared to PollBol due to the popularity of Last.fm.</p>
+
+<p>With PollBol, I had to think of a development platform that would allow me to complete the project within my summer vacations. And what better for agile development than <a href="http://www.rubyonrails.org/">Ruby On Rails</a>. It was exciting to use Rails as it divides the entire project into three parts: <a href="http://en.wikipedia.org/wiki/Model-view-controller">Models, Views and Controllers</a>. And this makes it easier to plan on the various modules of the project.</p>
+
+<p>I started out with the basic models of <em>Questions, Answers and Users</em> and then added modules as I started getting more comfortable with Rails. It makes it very easy to create models through migrations. You don&#8217;t need to know much of Sql in order to be able to manage data in a database.</p>
+
+<p>Rails also makes it dead simple to create views for your app, though eventually to make your app look better, you need to have decent CSS skills. Usually, for each Controller, there is a corresponding View. The controller acts as a glue between the model and the view. The Controller performs all the programming part whereas all the formatting information is contained in the View. Rails also provides Helpers, which help to make Views even more simple and less complicated.</p>
+
+<p><a href="http://code.google.com/apis/chart/">Google Charts API</a> came in handy to display the results of polls.</p>
+
+<p>Though PollBol hasn&#8217;t had as many users as <a href="http://ankitahuja.com/apps/lastfm">FriendComparé</a>, only a handful of people who I really had to convince to help me test the app :p (thanks <a href="http://www.sameerahuja.com">Sameer</a>, Neha, etc.), it was a fascinatingly learning and fun experience developing it.</p>
+
+<p>Some of the unique features in PollBol are:</p>
+
+<ol>
+<li><p>You can add additional answers/choices to a poll if you don&#8217;t like the available ones</p></li>
+<li><p>You can be friends with other users so you can follow their activity</p></li>
+<li><p>RSS Feeds for public activity, latest polls, popular polls, etc.</p></li>
+<li><p>Commenting on Polls</p></li>
+</ol>
+
+
+<p>PollBol hasn&#8217;t been tried by too many people yet. Maybe its because I haven&#8217;t tweeted or blogged about it. Also, unless its an app as popular as twitter or last.fm, with the social webapps overload, people normally cringe at the thought of registering at a new website ( including me ). Maybe in future, I will allow non-registered users to participate in polling as well as integrating it with OpenID.</p>
+
+<p>Meanwhile, here are a few screenshots for you to chew on:</p>
+
+<div id="pollbol_screenshots">
+  <img class="center" src="http://ankit.github.io/images/posts/pollbol/2.jpg">
+  <img class="center" src="http://ankit.github.io/images/posts/pollbol/3.jpg">
+  <img class="center" src="http://ankit.github.io/images/posts/pollbol/4.jpg">
+  <img class="center" src="http://ankit.github.io/images/posts/pollbol/5.jpg">
+  <img class="center" src="http://ankit.github.io/images/posts/pollbol/6.jpg">
+  <img class="center" src="http://ankit.github.io/images/posts/pollbol/7.jpg">
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[FriendComparé, my first web app]]></title>
+    <link href="http://ankit.github.io/blog/2008/07/13/friendcompare/"/>
+    <updated>2008-07-13T00:00:00-07:00</updated>
+    <id>http://ankit.github.io/blog/2008/07/13/friendcompare</id>
+    <content type="html"><![CDATA[<p><a href="http://ankitahuja.com/apps/lastfm">
+  <img class="center" src="http://ankit.github.io/images/posts/friendcompare/1.jpg">
+</a></p>
+
+<p>Yes, it is called <a href="http://ankitahuja.com/apps/lastfm">Friendcomparé</a>. To describe it simply, it lets you compare your musical tastes with your last.fm friends and neighbors.  You just enter your <a href="http://www.last.fm">last.fm</a> username and it brings up a list of your friends and neighbors with whom you can compare. Once you choose to compare, it shows you the top tracks, artists, albums, tags, friends as well as recently played tracks that are common between both the users.</p>
+
+<!-- more -->
+
+
+<p>Though it isn&#8217;t anything huge, I am happy with it. It took some effort, probably more in the design part than in the development part, to get it somewhat pleasing to the eyes and yes, functional. But it was a fun and learning experience. Along the way, <a href="http://www.sameerahuja.com">Sameer</a> gave me some brilliant ideas and criticism, for which I am grateful to him. Also, a couple of people at my favorite IRC channal, #think-digit, who gave me criticism and a third-person point of view, and also appreciation :)</p>
+
+<p>As I went on coding and adding new little features, I learnt a lot on creating CSS layouts and programming with PHP. I learnt a lot more CSS tricks which are definitely going to help me out in my next webdesign project ;). And while coding with PHP, I eventually got hints about its object oriented nature and that how it could make expanding the application a very simple task. In future, I would probably like to make use of AJAX to make it a little more web 2.0 :)</p>
+
+<p>I have this idea of probably building a facebook or orkut application for it, will it be useful? You can let me know in the comments.</p>
+
+<p>Here are a few screenshots:</p>
+
+<p><img class="center" src="http://img.skitch.com/20090405-ptc4jigqewcy3rh9h1cu8m856e.jpg">
+<img class="center" src="http://img.skitch.com/20090405-jfkp6itukqi49bypdc356wpy9u.jpg">
+<img class="center" src="http://img.skitch.com/20090405-bhqidubhwwbr7n6hn4d76k5gt1.jpg"></p>
+
+<p>Build.last.fm - <a href="http://build.last.fm/item/433">http://build.last.fm/item/433</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Top 10 Applications that deserve a place in your Windows Taskbar]]></title>
+    <link href="http://ankit.github.io/blog/2008/04/15/top-10-applications-that-deserve-a-place-in-your-windows-taskbar/"/>
+    <updated>2008-04-15T00:00:00-07:00</updated>
+    <id>http://ankit.github.io/blog/2008/04/15/top-10-applications-that-deserve-a-place-in-your-windows-taskbar</id>
+    <content type="html"><![CDATA[<p>I personally don&#8217;t like Windows too much. And there is no one reason for it. The registry hiccups, the memory leaks, the startup jams, etc. I don&#8217;t think the list will ever end if I sat down to make a list of things I don&#8217;t like about Windows.  But this is not what this post is about.</p>
+
+<p>It&#8217;s about the applications that give us a quaint little feeling that somehow using Windows is after all justified ;) These applications range from web apps to utilities and tools for windows. They don&#8217;t occupy much of the memory and prove to be very useful many times.</p>
+
+<!-- more -->
+
+
+<p>Its important that you choose which applications are more useful to you for 2 reasons:</p>
+
+<ol>
+<li><p>You don&#8217;t want to be clogging up your task bar with a no. of icons which not only eat up space but also take up memory (unless you have a widescreen 19&#8221; monitor and 2 gig memory like me. And even then I have to be careful.)</p></li>
+<li><p>As if the startup in windows wasn&#8217;t already slow enough, they can make it even more painful for you, that is, if you don&#8217;t keep them under a check.</p></li>
+</ol>
+
+
+<p>Here is my list of my favorite 10 apps that I can&#8217;t live without :</p>
+
+<ol>
+<li><p><a href="http://instant-eyedropper.com">Instant EyeDropper</a></p>
+
+<p> This is especially useful if you are a designer of some sort, whether a web designer or graphic designer. I used to find it exceptionally painful to copy hexadecimal color codes from any website on the internet to use in my own design. And this really helps out. I use Adobe Kuler. And there are more websites out there which help you make your own color schemes. All you have to do is click on its icon in the taskbar and then just drag your mouse pointer to any element whose color code you want to copy to the clipboard. As simple as that.</p></li>
+<li><p><a href="http://wordweb.info/free/">WordWeb</a></p>
+
+<p> One of the most useful applications which I think everyone should have. Whenever you come across a difficult word, all you have to do is select it and press &#8216;Ctrl+Alt+W&#8217;. You can also assign your own shortcut. Its window crops up and instantly gives you the meaning along with a list of synonyms and also the word&#8217;s pronunciation. I personally have never even required to consult the &#8216;Web References&#8217;, since its quite sufficient on its own.</p></li>
+<li><p><a href="http://www.wakoopa.com">Wakoopa</a></p>
+
+<p> So are you crazy about sharing everything and anything you do ? This is a great web app that tells you what applications you have been using and for how long. This has a social aspect to it, as you can find people who are using the same applications as you are.</p></li>
+<li><p><a href="http://www.rescuetime.com">RescueTime</a></p>
+
+<p> This does the same job as Wakoopa but has entirely different utility. It provides you with an insight into how you have been spending your time on your computer. It has nice graphs and you can see data for the day, week, month or year.</p></li>
+<li><p><a href="http://www.brandonz.net/projects/zscreen/">Zscreen</a></p>
+
+<p> I recently discovered this opensource application. Great for bloggers as you can easily assign a shortcut key to take the screenshot of the current application, entire desktop or a specific part of the screen. It automatically saves the screenshot in your chosen directory in any format you please (png, jpeg, etc.). It also gels well with image editing applications like Paint.NET or Adobe Photoshop.</p></li>
+<li><p><a href="http://www.metal-machine.de/readerror/">NetMeter</a></p>
+
+<p> Though one might argue that it doesn&#8217;t have that much of utility, but still I think it provides a nice little nifty look into your broadband upload and download. It also provides a nice total of all your download and upload. So sometimes it provides this overwhelming feeling that you have already downloaded 10 gigs of data this month :D</p></li>
+<li><p><a href="http://www.amazesoft.com/en/download.htm">FlashGet</a></p>
+
+<p> Best download utility ever. It easily downloads torrents as well as any other file. You can pause and resume and it definitely provides the best speeds. Better than utorrent and others for me.</p></li>
+<li><p><a href="http://www.last.fm">Last.fm</a></p>
+
+<p> Another social app which <em>scrobbles</em> the music that you hear whether in any of your media players or its own client. It comes with plugins for practically all popular media players including Windows Media Player, foobar2000, Winamp, etc. In its client, you just enter an artist or song you love, and it plays you similar music seamlessly.</p></li>
+<li><p><a href="http://www.autohotkey.com/">AutoHotKey</a></p>
+
+<p> Great for those who love scripting. I personally haven&#8217;t played with it a lot but I feel it has scope to do a lot in a jiffy. You can assign any combination of keys or clicks to do practically anything you want. Go <a href="http://nothickmanuals.info/doku.php/articles:autohotkey">here</a> to find some cool ways to work with it.</p></li>
+<li><p><a href="http://free.grisoft.com/doc/2/">AVG</a></p>
+
+<p>Everybody keeps screaming about antiviruses so I feel its better to have one. Though I hardly update it or anything. But still the free edition of AVG is nice, it doesn&#8217;t consume much of your memory and works quietly in the background.</p></li>
+</ol>
+
+
+<p>Well, that about sums it up. If you want to share your fav. taskbar apps, feel free to share them in the comments. It would be great to know what other little nifty apps are out there (And I am sure that there are many many more&#8230;).</p>
+
+<p>After all, they do make us feel more optimistic about Windows.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Haal Pooch Kar Mera, Intezar to Karte...]]></title>
+    <link href="http://ankit.github.io/blog/2008/03/18/urdu-nazm-rasm/"/>
+    <updated>2008-03-18T00:00:00-07:00</updated>
+    <id>http://ankit.github.io/blog/2008/03/18/urdu-nazm-rasm</id>
+    <content type="html"><![CDATA[<p>Before I say anything about my first real post on my blog, I would like to present to to you the following <a href="http://en.wikipedia.org/wiki/Nazm">Nazm</a> called &#8217;<strong>Rasm</strong>&#8217;.</p>
+
+<blockquote>
+  Haal Pooch Kar Mera, Intezar to Karte, Mera Haal Sun-ne Ka,           
+
+  Haal Pooch Kar Yun To, Aap Chhedh Sakte The,    
+
+  Jaise Ghar Tattayon Ka, Phir Bhi Ain Mumkin Hai,    
+
+  Aap Se Na Keh Paata, Naagawar Sach Batein,    
+
+  Aur Ram Dohraata, Muskaraa Ke Yeh Kehta,    
+
+  &#8216;Aap Ki Inaayat Hai&#8217;    
+
+  Phir Bhi Sochtaa Hun Mein, Haal Pooch Kar Mera,
+
+  Intezar To Karte, Mera Haal Sun-ne Ka   
+</blockquote>
+
+
+
+
+<!-- more -->
+
+
+<p>Now in case you are wondering what inspired me to write up this nazm, it was a communication skills workshop conducted by Mr.Ashok Lal of MDI, Gurgaon, India in my college recently. I instinctively liked it and found it very inspiring especially in today&#8217;s modern times. This nazm has actually prompted my interest in Urdu poetry and the like.</p>
+
+<p>The meaning behind this nazm is pretty obvious (if you understand a bit of Urdu)but still I will state its meaning.</p>
+
+<p>Having asked me how I feel, maybe you could have waited for my answer. It is true that you might have submitted yourself to a tale of my miseries but still its highly probable that I would have repeated the polite ritual of saying &#8220;I am fine, Thank You&#8221; with a forced smile.The true essence of the nazm lies in the fact that we all are very circumspect while communicating with others, tactfully modifying all our responses so as to make the other person feel cared about as well as keeping ourselves at a distance from their problems.</p>
+
+<p>What I infer from this nazm is that, no matter what, we should try to be true to ourselves, more than to others, and make sure we don&#8217;t say something just for the sake of saying it.</p>
+
+<p>Having said that, no matter how hard we try, we are sometimes put into situations where we can do nothing but compromise.</p>
+
+<p>Thats where, I feel, lies the true beauty of this contemporary nazm.</p>
+]]></content>
+  </entry>
+  
+</feed>

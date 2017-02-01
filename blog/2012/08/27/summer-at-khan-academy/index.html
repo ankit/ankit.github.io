@@ -1,0 +1,250 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Summer at Khan Academy - Ankit Ahuja</title>
+  <meta name="author" content="Ankit Ahuja">
+
+  
+  <meta name="description" content="As I look back at my summer in the Bay Area, I am glad I got the opportunity to work at Khan Academy. When I accepted the internship offer, I &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://ankit.github.io/blog/2012/08/27/summer-at-khan-academy">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Ankit Ahuja" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   class="no-sidebar"  >
+  <header role="banner">
+    <hgroup>
+  <h1><a href="/">Ankit Ahuja</a></h1>
+  
+    <h2>Code. Experiment. Read.</h2>
+  
+</hgroup>
+
+
+  </header>
+  <nav role="navigation">
+    
+<ul class="main-navigation">
+  <li>
+    <a href="/blog">
+      Blog
+    </a>
+  </li>
+  <li>
+    <a href="/projects">
+      Projects
+    </a>
+  </li>
+  <li>
+    <a href="/resume">
+      Résumé
+    </a>
+  </li>
+  <li>
+    <a href="/thesis">
+      Thesis
+    </a>
+  </li>
+  <li>
+</ul>
+
+
+  </nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Summer at Khan Academy</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-27T01:19:00-07:00" pubdate data-updated="true">Aug 27<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>As I look back at my summer in the Bay Area, I am glad I got the opportunity to work at Khan Academy. When I accepted the internship offer, I expected to meet amazing people, build cool things, and learn a bunch. It turned out to be exactly that, and a lot more! To top it off, I got to spend a relaxing summer with family!</p>
+
+<!-- more -->
+
+
+<h2>What I did at KA</h2>
+
+<p>I was a part of the PHP (People Helping People!) team. We were a group of five focused on building features to grow the Khan Academy user community.</p>
+
+<h3>User’s Discussion Activity</h3>
+
+<p><img src="/images/2012-08-27/1-profile-discussion.jpg" alt="Brit's profile" /></p>
+
+<p>As I played with the existing community features on the site, I noticed an obvious missing piece. When you visited a user’s profile, you couldn’t look at their contributions on the site. This could be useful when looking at an active user’s profile. But more than that, it could help users build up their identity on the site (like earning badges), and encourage better quality participation (less spaminess!). Later on, it proved useful from a moderator’s perspective as well. After intense design discussions with the likes of <a href="http://www.khanacademy.org/profile/kitthirasaki/discussion">Kitt</a> and <a href="http://shipordie.com">Jason</a>, it was wonderful to ship this within my first few weeks!</p>
+
+<h3>Make Discussion Public!</h3>
+
+<p><img src="/images/2012-08-27/2-public-discussion.jpg" alt="Public Discussion" /></p>
+
+<p>Earlier, users could have private profiles, and their discussion would be hidden to other users. I made it so even for private users, you could visit their profile to look at their discussion! A first step towards potentially making all user profiles public?</p>
+
+<h3>Discussion on Video Pages</h3>
+
+<p><img src="/images/2012-08-27/3-video-discussion.jpg" alt="Video Discussion" /></p>
+
+<p>We now had a new UI for showing user’s discussion activity on their profile, but the existing discussion the video pages still sucked. So, the next step was to refactor the code and visual styling of the discussion on the video pages. This turned out to be a bigger piece than I initially anticipated, which included working around Google App Engine’s limitations and learning about backfilling. This also came with new quality control features built by Drew! (low quality notices, better moderation tools and a lot more)</p>
+
+<h3>Discussion everywhere — Refactoring (lots of it!)</h3>
+
+<p><img src="/images/2012-08-27/4-everywhere.jpg" alt="Discussion everywhere!" /></p>
+
+<p>As part of porting the video discussion, I came up with a new reusable Discussion Javascript plugin which could be easily plopped anywhere. This was in anticipation of supporting discussion in different places. It is now being used on User Profiles, Video Pages, Topic Pages, CS Scratchpads and the Moderator Queue! Jamie did a <a href="http://jamie-wong.com/2012/08/22/what-i-did-at-khan-academy/#Discussions">great job</a> of working on the backends to port the Discussion to work with any entity type (instead of just videos), and it was wonderful to have discussion show up on the site with the <a href="http://www.khanacademy.org/cs">Computer Science</a> launch.</p>
+
+<h3>Moderator Queue</h3>
+
+<p>As I neared the end of my internship, I scratched the surface of making the Moderator Queue usable and more rewarding and fun for moderators (including me!)</p>
+
+<h3>#FIXIT Day</h3>
+
+<p>I got to refactoring a couple of massive, jumbled up CSS files into Less. Go Less.</p>
+
+<h2>What I learnt</h2>
+
+<ul>
+<li>Writing code in small building blocks is an art. Thank you <a href="http://missmarcialee.com/">Marcia</a>!</li>
+<li>Breaking down big features into smaller ones, and planning subsequent deadlines makes everything more enjoyable and less of a chore.</li>
+<li>It is important to weigh the importance of features - to make sure you work on the right ones.</li>
+<li>Better packaging my work so that I can show it off during Dev Standups and Company Updates. Demos!</li>
+<li>With better planning, I could’ve done other non-PHP things.  This would have given me the opportunity to collaborate more with other people on different teams.</li>
+<li>I enjoy design discussions! Both abstract and specifically about user experiences of small features.</li>
+<li>I like all types of Beer. I also like Hotdogs.</li>
+</ul>
+
+
+<h2>Fun parts</h2>
+
+<ul>
+<li>Laid Back culture. Everybody can work at their own pace!</li>
+<li>Open-ness. It was so easy to look at what other teams were doing, and critique their work!</li>
+<li>Beer tastings, Bread eatings, Lemonades, Lunches on Castro St.</li>
+<li>Movie nights, hiking at Muir woods (some others I missed :|)</li>
+</ul>
+
+
+<p>I would miss working with the Khan Academy team and highly recommend it as a place to do an internship. It is one of the most enjoyable ones you could have! If you’re not convinced, you can read about <a href="http://benalpert.com/2012/08/24/what-i-did-at-khan-academy-2012.html">Ben&#8217;s</a> and <a href="http://jamie-wong.com/2012/08/22/what-i-did-at-khan-academy/">Jamie&#8217;s</a> experiences.</p>
+</div>
+
+
+  <footer>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://ankit.github.io/blog/2012/08/27/summer-at-khan-academy/" data-via="ahujaankit" data-counturl="http://ankit.github.io/blog/2012/08/27/summer-at-khan-academy/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2011/05/06/deploying-on-dreamhost-using-git/" title="Previous Post: Deploying on Dreamhost using Git">&laquo; Deploying on Dreamhost using Git</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+
+    </div>
+  </div>
+  <div class="search-container">
+    
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:ankit.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+
+  </div>
+  <footer role="contentinfo">
+    <p>
+  Copyright &copy; 2017 - Ankit Ahuja -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+  - Theme adapted from <a href='http://aron.cedercrantz.com/'>Aron</a>
+</p>
+
+
+  </footer>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

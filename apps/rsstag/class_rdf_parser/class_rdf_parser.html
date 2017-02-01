@@ -1,0 +1,553 @@
+<html>
+<head>
+<title>RDF Parser (class_rdf_parser.php)</title>
+<link rel="stylesheet" href="main.css" type="text/css">
+</head>
+
+<body>
+<div align="center">
+<table border="0" width="80%" cellpadding="0" cellspacing="0">
+<tr>
+  <td bgcolor="#aaaaee" class="text" align="center"><a href="http://phpxmlclasses.sourceforge.net/">PHP XML Classes</a></td>
+</tr>
+</table>
+<table border="0" width="80%" cellpadding="0" cellspacing="0">
+<tr>
+  <td width="10%" bgcolor="#aaaaee" class="textblbl" align="left">
+  <a href="http://www.w3.org/RDF/" title="RDF Resource Description
+Framework"> <img border="0" src="http://www.w3.org/RDF/icons/rdf_w3c_button.32"
+alt="RDF Resource Description Framework Icon"></a>
+  </td>
+
+  <td bgcolor="#aaaaee" class="textblbl" align="center">RDF Parser (class_rdf_parser.php)</td>
+</tr>
+</table>
+<br/>
+<table border="0" width="80%">
+<tr>
+  <td bgcolor="#eeeeff" class="text">Description: This class is a port to PHP of the <a href="http://injektilo.org/rdf/repat.html">Repat</a>
+  parser by Jason Diammond. Repat originally written in C was ported to PHP code using the XML parser functions of PHP, the result is a
+  SAX-like RDF parser in native PHP code. RDF is an initiative of the W3C to describe metadata, you can find everything 
+  about RDF in <a href="http://www.w3.org/RDF/">the W3C site</a>.<br/><br/>
+  The class implements an event-driven interface for parsing RDF, when an RDF statement is found a handler defined by
+  you (a PHP function) will be called and you can do whatever you want with the RDF triple (subject,predicate,object).<br/>
+  See usage information below and class documentation for a full description of this class.
+  </td>
+</tr>
+</table>
+<br/>
+<table border="0" bgcolor="ddddff" width="80%">
+<tr>
+  <td valign="top" class="text" width="50%"><b>NEWS:</b>
+  <ul>
+    <li> 06-13-2002 First version of this class released.
+  </ul>
+  </td>
+  <td valign="top" width="50%" class="text">
+     This class code as well as documentation are hosted at <a href="http://www.sourceforge.net">SourceForge</a>
+     please visit our <a href="http://www.sourceforge.net/projects/phpxmlclasses/">SourceForge page</a> for releases, documentation, bug-tracking, support
+     forums and mailing lists.
+  </td>
+</tr>
+</table>
+<br/>
+<table border="0" width="80%" cellpadding="0" cellspacing="0">
+<tr>
+  <td class="textbl" bgcolor="aaaaee" width="50%">Resources</td>
+  <td class="textbl" bgcolor="aaaaee" width="50%">Requirements</td>
+</tr>
+</table>
+<table border="1" width="80%" cellpadding="0" cellspacing="0">
+<tr>
+  <td valign="top" bgcolor="eeeeff" class="text" width="50%">
+  <ul>
+    <li><a class="textbl" href="http://www.sourceforge.net/projects/phpxmlclasses">Downloads</a>
+    <li><a class="textbl" href="http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/phpxmlclasses/rdf_parser/">Browse CVS</a>
+    <li><a class="textbl" href="http://sourceforge.net/tracker/?atid=470965&group_id=53613&func=browse">Report Bugs</a>
+    <li><a class="textbl" href="http://phpxmlclasses.sourceforge.net/php_rdf_tutorial.pdf">Tutorial (pdf)</a>
+  </ul>
+  </td>
+  <td valign="top" bgcolor="eeeeff" class="text" width="50%">
+  <ul>
+    <li>PHP 4.0.5+
+  </ul>
+  </td>
+</tr>
+</table>
+<br/>
+
+
+<table border="0" width="80%" cellpadding="0" cellspacing="0">
+<tr>
+  <td class="textbl" bgcolor="aaaaee" width="50%">Features</td>
+  <td class="textbl" bgcolor="aaaaee" width="50%">To-dos</td>
+</tr>
+</table>
+<table border="1" width="80%" cellpadding="0" cellspacing="0">
+<tr>
+  <td valign="top" bgcolor="eeeeff" class="text" width="50%">
+  <ul>
+    <li>All the valid RDF XML syntaxes defined by the W3C are supported. (<a href="http://www.w3.org/TR/1999/REC-rdf-syntax-19990222/">See RDF XML syntax spec here</a>)
+    <li>Can parse RDF embeddded in other XML vocabulaires.
+    <li>You can define SAX handlers for non-RDF XML elements. Thus allowing you to parse RDF and non-RDF in just one pass.
+  </ul>
+  </td>
+  <td valign="top" bgcolor="ddddff" class="text" width="50%">
+  <ul>
+    <li>If you have some to-do in mind let me know it.
+  </ul>
+  </td>
+  
+</tr>
+</table>
+<br/>
+<table border="0" bgcolor="ddddff" width="80%">
+<tr>
+<!--
+  <td valign="top" class="text" width="50%"><b>To-do/future releases:</b>
+  <ul>
+    <li>Class 
+    <li>Class 
+    <li>Class 
+  </ul>
+  </td> -->
+  <td valign="top" width="100%" class="text">
+     Contact: Luis Argerich (<a href="mailto:lrargerich@yahoo.com">lrargerich@yahoo.com</a>)
+  </td>
+</tr>
+</table>
+<br/>
+<table border="0" bgcolor="ddddff" width="80%">
+<tr>
+<!--
+  <td valign="top" class="text" width="50%"><b>To-do/future releases:</b>
+  <ul>
+    <li>Class 
+    <li>Class 
+    <li>Class 
+  </ul>
+  </td> -->
+  <td valign="top" width="100%" class="text">
+    <b>Detailed description and usage:</b>
+<br/><br/>
+The first thing to do is to create an object of the class and then create a new RDF parser:
+<br/><br/>
+<pre>
+$rdf=new Rdf_parser();
+$rdf->rdf_parser_create( NULL );
+</pre>    
+<br/>
+Now we have to define the handlers to be used, you can use the following methods to set handlers:
+<br/><br/>
+<ul>
+  <li>rdf_set_statement_handler($handler)
+  <li>rdf_set_element_handler($start_handler,$end_handler);
+  <li>rdf_set_warning_handler($warning_handler);
+  <li>rdf_set_character_data_handler($character_data_handler);
+</ul>
+<br/><br/>
+<b>The Statement handler</b>
+<br/><br/>
+The statement handler is the most important handler since it will be the one called when 
+RDF statements are
+found, we'll define the handler here and then describe each parameter:
+<br/><br/>
+<pre>
+  $rdf->rdf_set_statement_handler("my_statement_handler");
+  function my_statement_handler(&$user_data, $subject_type, $subject, $predicate, 
+                                 $ordinal,$object_type,$object,$xml_lang )
+  {
+    // Code here
+  }
+</pre>
+<br/><br/>
+<b>The statement handler parameters</b>
+<br/><br/>
+  <table border="1">
+    <tr><td class="text">Parameter</td><td class="text">Description</td></tr>
+    <tr><td class="text">user_data</td><td class="text">user_data is a php variable that can be set using rdf_set_user_data($data),once the variable is set you can access it or use it in every handler for whatever you want.</td></tr>
+    <tr><td class="text">subject_type</td><td class="text">The subject type of the RDF statement, posible values are:
+    <ul>
+      <li>RDF_SUBJECT_TYPE_URI</li>
+      <li>RDF_SUBJECT_TYPE_DISTRIBUTED</li>
+      <li>RDF_SUBJECT_TYPE_PREFIX</li>
+      <li>RDF_SUBJECT_TYPE_ANONYMOUS</li>
+    </ul></td></tr>
+    <tr><td class="text">subject</td><td class="text">The value of the subject of an RDF statement.</td></tr>
+    <tr><td class="text">predicate</td><td class="text">The predicate of an RDF statement.</td></tr>
+    <tr><td class="text">ordinal</td><td class="text">The ordinal position if the statement describes a member of a RDF collection.</td></tr>
+    <tr><td class="text">object_type</td><td class="text"></td>The object type of the RDF statement, values are:
+    <ul>
+    <li>RDF_OBJECT_TYPE_RESOURCE</li>
+    <li>RDF_OBJECT_TYPE_LITERAL</li>
+    <li>RDF_OBJECT_TYPE_XML</li>
+    </ul></tr>
+    <tr><td class="text">object</td><td class="text">The value of the staement's object</td></tr>
+    <tr><td class="text">xml_lang</td><td class="text">The value of the xml_lang attribute if set</td></tr>
+  </table>
+<br/><br/>
+<b>Other handlers</b>
+<br/><br/>
+The start and end element handlers are triggered (if set) when some non-RDF XML element is found by the parser,
+the start_element_handler should receive $user_data,$name and $attributes while the end_element handler receives
+$user_data and $name.
+<b>The character data handler</b>
+<br/><br/>
+This handler is triggered when data is found outside RDF elements (if the handler is set). The handler receives
+two arguments: $user_data and $data containing the characters found.
+<b>The warning handler</b>
+<br/><br/>
+The warning handler is triggered (if set) when an RDF error is detected, teh handler receives one argument: $message
+containing the description of the error.
+<b>Parsing</b>
+<br/><br/>
+To parse a RDF document use the $rdf->rdf_parse($s,$len,$is_final) function you can parse the document by chunks
+calling this function many times the arguments are: $s is the data to be parsed, $len is the length of the data
+to be parsed and $is_final is a boolean indicating if this chunk is the last chunk of the document (no more data).
+The method returns true if everything went well or false if there's an XML error while parsing the document.
+<br/>
+</div>
+<h3>Documentation</h3>
+<h2>Classes</h2>
+<ul>
+  <li><a href="#class28">Rdf_parser</a></li>
+</ul>
+
+<a name="class28"></a>
+<h3>Rdf_parser</h3>
+Extends: None<hr>
+Description: This class parses RDF documents in any RDF valid syntax according to the RDF specification. Events are produced that can be intercepted by callback PHP functions.<hr>
+<br>
+
+<!-- METHOD SUMMARY -->
+<A NAME="pDomNode_method_summary"><!-- --></A>
+<TABLE BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD COLSPAN=2><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TD>
+</TR>
+
+<!-- A ROW -->
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;Boolean</CODE></FONT></TD>
+          <TD><CODE><B><A HREF="#class28method1">rdf_parser_create</A></B>(string $encoding)</CODE>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates an RDF parser</TD>
+</TR>
+<!-- A ROW -->
+<!-- A ROW -->
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+          <TD><CODE><B><A HREF="#class28method2">rdf_parser_free</A></B>(string $encoding)</CODE>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Frees resources allocated by an RDF parser</TD>
+</TR>
+<!-- A ROW -->
+<!-- A ROW -->
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+          <TD><CODE><B><A HREF="#class28method3">rdf_set_user_data</A></B>(Any $user_data)</CODE>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets a php variable as the parser user data</TD>
+</TR>
+<!-- A ROW -->
+<!-- A ROW -->
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+          <TD><CODE><B><A HREF="#class28method4">rdf_set_statement_handler</A></B>(string $handler)</CODE>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set the handler to be called when statements are found.</TD>
+</TR>
+<!-- A ROW -->
+<!-- A ROW -->
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+          <TD><CODE><B><A HREF="#class28method5">rdf_set_parse_type_literal_handler</A></B>(string $start, string $end)</CODE>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets handlers for parse type literals</TD>
+</TR>
+<!-- A ROW -->
+<!-- A ROW -->
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+          <TD><CODE><B><A HREF="#class28method6">rdf_set_element_handler</A></B>(string $start, string $end)</CODE>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets handlers to be called when a non-RDF element starts or ends</TD>
+</TR>
+<!-- A ROW -->
+<!-- A ROW -->
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+          <TD><CODE><B><A HREF="#class28method7">rdf_set_character_data_handler</A></B>(string $handler)</CODE>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This allows you to define a handler for text outside RDF elements.</TD>
+</TR>
+<!-- A ROW -->
+<!-- A ROW -->
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+          <TD><CODE><B><A HREF="#class28method8">rdf_set_warning_handler</A></B>(string $handler)</CODE>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets a warning handler to be called if the RDF document is broken</TD>
+</TR>
+<!-- A ROW -->
+<!-- A ROW -->
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;Boolean</CODE></FONT></TD>
+          <TD><CODE><B><A HREF="#class28method9">rdf_parse</A></B>(string $s, int $len, boolean $is_final)</CODE>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parses a portion of an RDF document or a whole document</TD>
+</TR>
+<!-- A ROW -->
+<!-- A ROW -->
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+          <TD><CODE><B><A HREF="#class28method10">rdf_set_base</A></B>(string $base)</CODE>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the base name of the document being parsed</TD>
+</TR>
+<!-- A ROW -->
+</TABLE>
+&nbsp;
+<P>
+<!-- METHOD SUMMARY -->
+
+
+<!-- ============ METHOD DETAIL ========== -->
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD COLSPAN=1><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TD>
+</TR>
+</TABLE>
+
+
+<!--  method -->
+<A NAME="class28method1"><!-- --></A>
+<H3>rdf_parser_create</H3>
+
+
+
+<PRE>
+Boolean <B>rdf_parser_create</B>(string $encoding)</PRE>
+               
+<DL>
+<DD>This function creates a new RDF parser, this is the first method you should call before parsing a RDF document.<DD>&nbsp;
+<DL>
+<DT><B>Parameters:</B><DD>
+                          $encoding - This optional parameter can indicate the encoding that can be used to parse the document, see the XML parser extension of PHP for valid encodings.<br><DT><B>Returns:</B><DD>False if the parser cannot be created<DT><B>Throws:</B><DD><CODE>None</CODE>
+</DL>
+</DD>
+</DL>
+<HR>
+<!-- a method -->
+<!--  method -->
+<A NAME="class28method2"><!-- --></A>
+<H3>rdf_parser_free</H3>
+
+
+
+<PRE>
+void <B>rdf_parser_free</B>(string $encoding)</PRE>
+               
+<DL>
+<DD>This method cleans the internal state of the RDF parser, you can parse multiple documents with the same object if you call this method and then rdf_parser_create.<DD>&nbsp;
+<DL>
+<DT><B>Parameters:</B><DD>
+                          <DT><B>Returns:</B><DD>Nothing<DT><B>Throws:</B><DD><CODE>None</CODE>
+</DL>
+</DD>
+</DL>
+<HR>
+<!-- a method -->
+<!--  method -->
+<A NAME="class28method3"><!-- --></A>
+<H3>rdf_set_user_data</H3>
+
+
+
+<PRE>
+void <B>rdf_set_user_data</B>(Any $user_data)</PRE>
+               
+<DL>
+<DD>This method allows you to set a PHP variable as "user data", handlers will then receive and can access/modify this variable. Note that this is completely optional.<DD>&nbsp;
+<DL>
+<DT><B>Parameters:</B><DD>
+                          $user_data - A PHP variable to be used as user_data inside the parser<br><DT><B>Returns:</B><DD>Nothing<DT><B>Throws:</B><DD><CODE>None</CODE>
+</DL>
+</DD>
+</DL>
+<HR>
+<!-- a method -->
+<!--  method -->
+<A NAME="class28method4"><!-- --></A>
+<H3>rdf_set_statement_handler</H3>
+
+
+
+<PRE>
+void <B>rdf_set_statement_handler</B>(string $handler)</PRE>
+               
+<DL>
+<DD>When the parser sees an RDF statement it will call the method defined with this function.<DD>&nbsp;
+<DL>
+<DT><B>Parameters:</B><DD>
+                          $handler - The handler prototype is:
+function my_statement_handler(&$user_data,$subject_type,
+$subject,$predicate,$ordinal,$object_type,$object,$xml_lang)
+Where:
+$user_data: is a PHP variable passed as user_data (if set)
+$subject_type: is the kind of subject for the RDF statement, possible values are: RDF_SUBJECT_TYPE_URI, RDF_SUBJECT_TYPE_DISTRIBUTED, RDF_SUBJECT_TYPE_PREFIX, RDF_SUBJECT_TYPE_ANONYMOUS.
+$subject: is the subject of the RDF statement.
+$predicate: is the predicate of the RDF statement.
+$ordinal: is the ordinal
+$object_type: defines the type of object of the RDF statement, possible values are: RDF_OBJECT_TYPE_RESOURCE ,RDF_OBJECT_TYPE_LITERAL, RDF_OBJECT_TYPE_XML
+$object: Is the object of the statement
+$xml_lang: Is the xml_lang attribute value if present.<br><DT><B>Returns:</B><DD>Nothing<DT><B>Throws:</B><DD><CODE>None</CODE>
+</DL>
+</DD>
+</DL>
+<HR>
+<!-- a method -->
+<!--  method -->
+<A NAME="class28method5"><!-- --></A>
+<H3>rdf_set_parse_type_literal_handler</H3>
+
+
+
+<PRE>
+void <B>rdf_set_parse_type_literal_handler</B>(string $start, string $end)</PRE>
+               
+<DL>
+<DD>This function sets handlers to be called when a parse type literal starts and when it ends.<DD>&nbsp;
+<DL>
+<DT><B>Parameters:</B><DD>
+                          $start - The handler receives just one parameter: &$user_data, you can ignore it if you are not using user_data in the parser.<br>$end - The handler receives just one parameter: &$user_data<br><DT><B>Returns:</B><DD>Nothing<DT><B>Throws:</B><DD><CODE>None</CODE>
+</DL>
+</DD>
+</DL>
+<HR>
+<!-- a method -->
+<!--  method -->
+<A NAME="class28method6"><!-- --></A>
+<H3>rdf_set_element_handler</H3>
+
+
+
+<PRE>
+void <B>rdf_set_element_handler</B>(string $start, string $end)</PRE>
+               
+<DL>
+<DD>RDF can be used in conjunction with other vocabularies, in such a case you can define normal SAX start-end element handlers to process non-RDF elements with this function.<DD>&nbsp;
+<DL>
+<DT><B>Parameters:</B><DD>
+                          $start - The handler reeives: &$user_data, $name, $attributes. Containing user_data (if used), the name of the element, and the attributes for the element. Attributes are received as an sociative array ($att_name=>$att_value)<br>$end - The handler should receive &$user_data, $name containing user_data if set and the name of the ending element.<br><DT><B>Returns:</B><DD>Nothing<DT><B>Throws:</B><DD><CODE>None</CODE>
+</DL>
+</DD>
+</DL>
+<HR>
+<!-- a method -->
+<!--  method -->
+<A NAME="class28method7"><!-- --></A>
+<H3>rdf_set_character_data_handler</H3>
+
+
+
+<PRE>
+void <B>rdf_set_character_data_handler</B>(string $handler)</PRE>
+               
+<DL>
+<DD>When some data is found outside RDF elements the function defined by this method is called (if set)<DD>&nbsp;
+<DL>
+<DT><B>Parameters:</B><DD>
+                          $handler - The handler should receive &$user_data and $data containing user_data (if used) and the data found.<br><DT><B>Returns:</B><DD>Nothing<DT><B>Throws:</B><DD><CODE>None</CODE>
+</DL>
+</DD>
+</DL>
+<HR>
+<!-- a method -->
+<!--  method -->
+<A NAME="class28method8"><!-- --></A>
+<H3>rdf_set_warning_handler</H3>
+
+
+
+<PRE>
+void <B>rdf_set_warning_handler</B>(string $handler)</PRE>
+               
+<DL>
+<DD>If the parser detects an RDF error then the function defined by this method will be called (if set)<DD>&nbsp;
+<DL>
+<DT><B>Parameters:</B><DD>
+                          $handler - The handler receives just one parameter: $warning with the description of the error detected, you can do whatever you want with the description, log it, display it etc.<br><DT><B>Returns:</B><DD>Nothing<DT><B>Throws:</B><DD><CODE>None</CODE>
+</DL>
+</DD>
+</DL>
+<HR>
+<!-- a method -->
+<!--  method -->
+<A NAME="class28method9"><!-- --></A>
+<H3>rdf_parse</H3>
+
+
+
+<PRE>
+Boolean <B>rdf_parse</B>(string $s, int $len, boolean $is_final)</PRE>
+               
+<DL>
+<DD>This function is used to parse RDF documents, you can process the document by chunks using repetitive calls of this function thus limiting the amount of memory to be used. This allows you to parse huge RDF documents without consuming all the server resources.
+Example:
+$input=fopen("some_file_or_url","r");
+while(!$done)
+{
+$buf = fread( $input, 512 );
+$done = feof($input);
+if ( ! $rdf->rdf_parse( $buf, strlen($buf), feof($input) ) )
+{
+ // process_error here
+}
+}<DD>&nbsp;
+<DL>
+<DT><B>Parameters:</B><DD>
+                          $s - This is a string containing a chunk of the RDF document being parsed.<br>$len - This contains the length of the data to be parsed, usually strlen($s)<br>$is_final - For example if you are parsing a file (or URL) use feof($fp) as a way to indicate if this is the final chunk.<br><DT><B>Returns:</B><DD>False if there\\\\\\\'s an error, true if everything is ok<DT><B>Throws:</B><DD><CODE>If an XML error is detected the function returns false.If an RDF error is detected then the function defined by rdf_set_warning_handler is called if set.</CODE>
+</DL>
+</DD>
+</DL>
+<HR>
+<!-- a method -->
+<!--  method -->
+<A NAME="class28method10"><!-- --></A>
+<H3>rdf_set_base</H3>
+
+
+
+<PRE>
+void <B>rdf_set_base</B>(string $base)</PRE>
+               
+<DL>
+<DD>If you are parsing a document from a URL use the URL as base, if you are parsing a file use file:://path as the base. This method is important since URIs will be constructed relative to the base when parsing the document.<DD>&nbsp;
+<DL>
+<DT><B>Parameters:</B><DD>
+                          $base - The URI of the RDF document being parsed, if you are parsing a file use file://path.<br><DT><B>Returns:</B><DD>Nothing<DT><B>Throws:</B><DD><CODE>None</CODE>
+</DL>
+</DD>
+</DL>
+<HR>
+<!-- a method -->
+<!-- ============ METHOD DETAIL ========== -->
+</td>
+</tr>
+</table>
+</body>
+</html>

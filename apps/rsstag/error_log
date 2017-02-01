@@ -1,0 +1,39 @@
+[15-Jul-2008 10:35:53] PHP Warning:  file_get_contents(http://ankitahuja.com/feed/) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/icedlabs/public_html/ankit/apps/rsstag/viewrss.php on line 66
+[15-Jul-2008 10:35:53] PHP Fatal error:  Uncaught exception 'Exception' with message 'String could not be parsed as XML' in /home/icedlabs/public_html/ankit/apps/rsstag/viewrss.php:68
+Stack trace:
+#0 /home/icedlabs/public_html/ankit/apps/rsstag/viewrss.php(68): SimpleXMLElement->__construct('')
+#1 {main}
+  thrown in /home/icedlabs/public_html/ankit/apps/rsstag/viewrss.php on line 68
+[15-Jul-2008 10:36:50] PHP Fatal error:  Call to a member function children() on a non-object in /home/icedlabs/public_html/ankit/apps/rsstag/viewrss.php on line 88
+[15-Jul-2008 10:38:24] PHP Fatal error:  Call to a member function children() on a non-object in /home/icedlabs/public_html/ankit/apps/rsstag/viewrss.php on line 88
+[15-Jul-2008 10:50:39] PHP Warning:  SimpleXMLElement::__construct() [<a href='simplexmlelement.--construct'>simplexmlelement.--construct</a>]: Entity: line 5: parser error : Opening and ending tag mismatch: link line 4 and head in /home/icedlabs/public_html/ankit/apps/rsstag/viewrss.php on line 68
+[15-Jul-2008 10:50:39] PHP Warning:  SimpleXMLElement::__construct() [<a href='simplexmlelement.--construct'>simplexmlelement.--construct</a>]: &lt;/head&gt; in /home/icedlabs/public_html/ankit/apps/rsstag/viewrss.php on line 68
+[15-Jul-2008 10:50:39] PHP Warning:  SimpleXMLElement::__construct() [<a href='simplexmlelement.--construct'>simplexmlelement.--construct</a>]:        ^ in /home/icedlabs/public_html/ankit/apps/rsstag/viewrss.php on line 68
+[15-Jul-2008 10:50:39] PHP Warning:  SimpleXMLElement::__construct() [<a href='simplexmlelement.--construct'>simplexmlelement.--construct</a>]: Entity: line 7: parser error : Opening and ending tag mismatch: img line 7 and a in /home/icedlabs/public_html/ankit/apps/rsstag/viewrss.php on line 68
+[15-Jul-2008 10:50:39] PHP Warning:  SimpleXMLElement::__construct() [<a href='simplexmlelement.--construct'>simplexmlelement.--construct</a>]: &lt;a href=&quot;http://opencalais.com/&quot;&gt;&lt;img src=&quot;images/calais_logo.gif&quot;&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/ in /home/icedlabs/public_html/ankit/apps/rsstag/viewrss.php on line 68
+[15-Jul-2008 10:50:39] PHP Warning:  SimpleXMLElement::__construct() [<a href='simplexmlelement.--construct'>simplexmlelement.--construct</a>]:                                                                        ^ in /home/icedlabs/public_html/ankit/apps/rsstag/viewrss.php on line 68
+[15-Jul-2008 10:50:39] PHP Warning:  SimpleXMLElement::__construct() [<a href='simplexmlelement.--construct'>simplexmlelement.--construct</a>]: Entity: line 11: parser error : Entity 'nbsp' not defined in /home/icedlabs/public_html/ankit/apps/rsstag/viewrss.php on line 68
+[15-Jul-2008 10:50:39] PHP Warning:  SimpleXMLElement::__construct() [<a href='simplexmlelement.--construct'>simplexmlelement.--construct</a>]: Enter the feed to analyze&amp;nbsp;&amp;nbsp; in /home/icedlabs/public_html/ankit/apps/rsstag/viewrss.php on line 68
+[15-Jul-2008 10:50:39] PHP Warning:  SimpleXMLElement::__construct() [<a href='simplexmlelement.--construct'>simplexmlelement.--construct</a>]:                                ^ in /home/icedlabs/public_html/ankit/apps/rsstag/viewrss.php on line 68
+[15-Jul-2008 10:50:39] PHP Warning:  SimpleXMLElement::__construct() [<a href='simplexmlelement.--construct'>simplexmlelement.--construct</a>]: Entity: line 11: parser error : Entity 'nbsp' not defined in /home/icedlabs/public_html/ankit/apps/rsstag/viewrss.php on line 68
+[15-Jul-2008 10:50:39] PHP Warning:  SimpleXMLElement::__construct() [<a href='simplexmlelement.--construct'>simplexmlelement.--construct</a>]: Enter the feed to analyze&amp;nbsp;&amp;nbsp; in /home/icedlabs/public_html/ankit/apps/rsstag/viewrss.php on line 68
+[15-Jul-2008 10:50:39] PHP Warning:  SimpleXMLElement::__construct() [<a href='simplexmlelement.--construct'>simplexmlelement.--construct</a>]:                                      ^ in /home/icedlabs/public_html/ankit/apps/rsstag/viewrss.php on line 68
+[15-Jul-2008 10:50:39] PHP Warning:  SimpleXMLElement::__construct() [<a href='simplexmlelement.--construct'>simplexmlelement.--construct</a>]: Entity: line 17: parser error : Opening and ending tag mismatch: a line 7 and body in /home/icedlabs/public_html/ankit/apps/rsstag/viewrss.php on line 68
+[15-Jul-2008 10:50:39] PHP Warning:  SimpleXMLElement::__construct() [<a href='simplexmlelement.--construct'>simplexmlelement.--construct</a>]: &lt;/body&gt; in /home/icedlabs/public_html/ankit/apps/rsstag/viewrss.php on line 68
+[15-Jul-2008 10:50:39] PHP Warning:  SimpleXMLElement::__construct() [<a href='simplexmlelement.--construct'>simplexmlelement.--construct</a>]:        ^ in /home/icedlabs/public_html/ankit/apps/rsstag/viewrss.php on line 68
+[15-Jul-2008 10:50:39] PHP Warning:  SimpleXMLElement::__construct() [<a href='simplexmlelement.--construct'>simplexmlelement.--construct</a>]: Entity: line 18: parser error : Opening and ending tag mismatch: body line 6 and html in /home/icedlabs/public_html/ankit/apps/rsstag/viewrss.php on line 68
+[15-Jul-2008 10:50:39] PHP Warning:  SimpleXMLElement::__construct() [<a href='simplexmlelement.--construct'>simplexmlelement.--construct</a>]: &lt;/html&gt; in /home/icedlabs/public_html/ankit/apps/rsstag/viewrss.php on line 68
+[15-Jul-2008 10:50:39] PHP Warning:  SimpleXMLElement::__construct() [<a href='simplexmlelement.--construct'>simplexmlelement.--construct</a>]:        ^ in /home/icedlabs/public_html/ankit/apps/rsstag/viewrss.php on line 68
+[15-Jul-2008 10:50:39] PHP Warning:  SimpleXMLElement::__construct() [<a href='simplexmlelement.--construct'>simplexmlelement.--construct</a>]: Entity: line 19: parser error : Premature end of data in tag head line 2 in /home/icedlabs/public_html/ankit/apps/rsstag/viewrss.php on line 68
+[15-Jul-2008 10:50:39] PHP Warning:  SimpleXMLElement::__construct() [<a href='simplexmlelement.--construct'>simplexmlelement.--construct</a>]:  in /home/icedlabs/public_html/ankit/apps/rsstag/viewrss.php on line 68
+[15-Jul-2008 10:50:39] PHP Warning:  SimpleXMLElement::__construct() [<a href='simplexmlelement.--construct'>simplexmlelement.--construct</a>]: ^ in /home/icedlabs/public_html/ankit/apps/rsstag/viewrss.php on line 68
+[15-Jul-2008 10:50:39] PHP Warning:  SimpleXMLElement::__construct() [<a href='simplexmlelement.--construct'>simplexmlelement.--construct</a>]: Entity: line 19: parser error : Premature end of data in tag html line 1 in /home/icedlabs/public_html/ankit/apps/rsstag/viewrss.php on line 68
+[15-Jul-2008 10:50:39] PHP Warning:  SimpleXMLElement::__construct() [<a href='simplexmlelement.--construct'>simplexmlelement.--construct</a>]:  in /home/icedlabs/public_html/ankit/apps/rsstag/viewrss.php on line 68
+[15-Jul-2008 10:50:39] PHP Warning:  SimpleXMLElement::__construct() [<a href='simplexmlelement.--construct'>simplexmlelement.--construct</a>]: ^ in /home/icedlabs/public_html/ankit/apps/rsstag/viewrss.php on line 68
+[15-Jul-2008 10:50:39] PHP Fatal error:  Uncaught exception 'Exception' with message 'String could not be parsed as XML' in /home/icedlabs/public_html/ankit/apps/rsstag/viewrss.php:68
+Stack trace:
+#0 /home/icedlabs/public_html/ankit/apps/rsstag/viewrss.php(68): SimpleXMLElement->__construct('<html>?<head>?<...')
+#1 {main}
+  thrown in /home/icedlabs/public_html/ankit/apps/rsstag/viewrss.php on line 68
+[15-Jul-2008 10:53:01] PHP Warning:  Invalid argument supplied for foreach() in /home/icedlabs/public_html/ankit/apps/rsstag/viewrss.php on line 70

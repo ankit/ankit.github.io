@@ -1,0 +1,82 @@
+Ankit Ahuja
+ahuja.ankit@gmail.com
+http://ankitahuja.com
+
+---------------------------------------------------------------------------
+Education
+---------------------------------------------------------------------------
+
+- M.S. Computer Science - May 2013 (expected)
+Specializing in Human Computer Interaction
+Virginia Tech, Blacksburg, VA
+GPA: 3.95 / 4.0
+
+- B.E. Computer Science and Engineering - August 2010
+SBIT, MDU, India
+
+---------------------------------------------------------------------------
+Skills
+---------------------------------------------------------------------------
+
+- Languages: JavaScript, Ruby, PHP, Objective-C, C++, SQL, HTML/CSS
+- Platforms: Ruby on Rails, Cocoa, Windows XP / 7, Mac OS X, Linux
+- Other Tools: Git, SVN, Xcode, Adobe Photoshop CS2
+
+---------------------------------------------------------------------------
+Experience
+---------------------------------------------------------------------------
+
+- Department of Computer Science, Virginia Tech (Aug. 2011 - Present)
+Graduate Research Assistant
+
+Working with Dr. Andrea Kavanaugh and Dr. Manuel A. Perez-Quinones in the areas of social computing and personal information management. Building Virtual Town Square (http://vts.cs.vt.edu/), a place for people in local communities to keep up and discuss important local issues.
+
+- Khan Academy, Mountain View (May - August 2012)
+Software Developer Intern
+
+Built features to grow the Khan Academy user community. Designed and implemented a discussion plugin which is used for user discussions across the site. Read more about my experience at http://ankitahuja.com/blog/2012/08/27/summer-at-khan-academy/.
+
+- Google - Google Summer of Code 2010 (May 2010 - Aug. 2010)
+Student Contractor
+
+Worked with Rachel Shearer from the Google Accessibility Engineering Team to develop Stylebot (http://stylebot.me), a Google Chrome extension that allows users to manipulate a web page's appearance in a WYSIWYG manner. The project aims to increase the accessibility and adaptability of the web for nontechnical and special-needs users.
+
+- Google - Google Summer of Code 2009 (May 2009 - Aug. 2009)
+Student Contractor
+
+Developed an extension for Joomla that allows non-technical users to easily make changes to their Joomla based sites' content without having to log into the administrative backend. Its aim was to make it easier for website owners to update their site's content without having to rely upon webmasters.
+
+---------------------------------------------------------------------------
+Self-Directed Projects
+---------------------------------------------------------------------------
+
+- Search Ninja
+
+iPhone App to make searching the web using different search engines easier and faster. Described on Mashable (http://mashable.com/2011/05/09/search-ninja/).
+
+- gleeBox
+http://thegleebox.com
+
+A browser extension that provides a novel way to browse the web using the keyboard. User can type in commands into a prompt to simulate actions like scrolling, opening links, etc., which are traditionally performed using the mouse. It aims to reduce RSI caused by constant switching between the mouse and the keyboard and speed up browsing for advanced users.
+
+- Stylebot Social
+http://stylebot.me
+
+A website where users can share and install other users' website modifications created using Stylebot.
+
+- Friendcompare
+A Last.fm mashup that lets users do a head-to-head comparsion of their musical tastes by displaying common artists, albums, tracks, etc.
+
+- PollBol
+Ruby on Rails application for small groups of users to create, share and vote on polls.
+
+- ProxyCal
+A web application for forgetful students to help them keep track of their college attendance. It utilizes the user's Google Calendar account as the data store instead of a conventional database.
+
+---------------------------------------------------------------------------
+Awards and Achievements
+---------------------------------------------------------------------------
+
+- Won the web designing, debugging and programming contests as part of the national-level technical fest, Techaeon 2009.
+
+- Won inter-school level competitions PROCOM Quiz and Cyberfest 2003 and participated in Science Olympiads, debates and recitation competitions.

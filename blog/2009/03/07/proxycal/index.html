@@ -1,0 +1,262 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>ProxyCal, a webapp built out of personal needs - Ankit Ahuja</title>
+  <meta name="author" content="Ankit Ahuja">
+
+  
+  <meta name="description" content="My college wanted us to do a project as part of a &#8221;Bridge Course&#8221; this semester. In a way, I liked the concept as it was at least trying &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://ankit.github.io/blog/2009/03/07/proxycal">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Ankit Ahuja" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   class="no-sidebar"  >
+  <header role="banner">
+    <hgroup>
+  <h1><a href="/">Ankit Ahuja</a></h1>
+  
+    <h2>Code. Experiment. Read.</h2>
+  
+</hgroup>
+
+
+  </header>
+  <nav role="navigation">
+    
+<ul class="main-navigation">
+  <li>
+    <a href="/blog">
+      Blog
+    </a>
+  </li>
+  <li>
+    <a href="/projects">
+      Projects
+    </a>
+  </li>
+  <li>
+    <a href="/resume">
+      Résumé
+    </a>
+  </li>
+  <li>
+    <a href="/thesis">
+      Thesis
+    </a>
+  </li>
+  <li>
+</ul>
+
+
+  </nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">ProxyCal, a Webapp Built Out of Personal Needs</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-03-07T00:00:00-08:00" pubdate data-updated="true">Mar 7<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p><img class="center" src="http://img.skitch.com/20090305-rr5sgy2jy7gbeie8hu7ssxfh9b.jpg"></p>
+
+<p>My college wanted us to do a project as part of a &#8221;<strong>Bridge Course</strong>&#8221; this semester. In a way, I liked the concept as it was at least trying to convince some people to do something besides curriculum. Personally, it&#8217;s always good when you are working towards some objective like completing a project you have to submit. An example is last summer, when I had to create a project for the summer and I ended up doing a lot of fun stuff.</p>
+
+<!--more-->
+
+
+<p>So, I thought, why not build a solution for a problem I have been facing for quite some time now. Those of you who know me personally or follow me on twitter, know that I am particularly unhappy about my college&#8217;s attendance criteria. It&#8217;s always been a headache for me trying to keep track of when I went to college and when I didn&#8217;t. I tried using <a href="http://calendar.google.com">Google Calendar</a> but I thought it was pretty cumbersome to use for this particular purpose.</p>
+
+<p>So, I thought, why not create a simple, easy-to-use and nice-looking webapp for exactly this purpose. That&#8217;s when ProxyCal was born. Even at the beginning, I had the idea in my mind of a calendar which used colors like green, red and yellow to denote the status for the day i.e. whether you went to college, took a leave or college was off. One more thing I wanted to do was to avoid anyone from creating a new account for using ProxyCal. So, I decided that I was going to store all the data regarding the attendance in a separate calendar &#8216;ProxyCal&#8217; in the user&#8217;s Google Calendars.</p>
+
+<p>So, all you need to use ProxyCal is to have a Google Account. This simplified things to quite an extent form the development point of view as it avoided me from maintaining a separate database for tracking a user&#8217;s attendance. I wanted my app to be <em>ajaxy</em> so I used the <a href="http://code.google.com/apis/calendar/docs/1.0/developers_guide_js.html">Google Calendar JavaScript API</a> which meant I didn&#8217;t have to go through the tedious process of making XMLHTTPRequests to a proxy on my server which in turn used the Google Calendar Data API.</p>
+
+<p>The entire app is almost completely developed using JavaScript. There is a bit of PHP to store some settings related data.</p>
+
+<p>Some of the fun and useful features of ProxyCal are:</p>
+
+<ol>
+<li><p>By default, it assumes you went to college on weekdays and college was off on weekends i.e Sat and Sun. This means, when you visit the app after some time, it automatically assigns the default statuses to the previous days in the month.</p></li>
+<li><p>It uses the following color scheme:</p>
+
+<ul>
+<li>Green - You went to college</li>
+<li>Red - You took a leave</li>
+<li>Yellow - College was Off</li>
+</ul>
+</li>
+<li><p>It allows you to set the cutoff percentage i.e. what percentage of attendance you are supposed to meet on a monthly basis.</p></li>
+<li><p> It also gives you an estimate of the no. of days you can take a leave in the current month.</p></li>
+<li><p>You can edit the status for any day by simply clicking on it. It display&#8217;s a popup where you can simply set the new status.</p></li>
+</ol>
+
+
+<p>For those of you wondering where the name came from, it does have some logic behind it. This app, in essence, assumes that once you went to college you either attended all the lectures or atleast had someone call a proxy for you :)
+You cannot set attendance for all lectures separately. That would have made the app a little too complicated which was exactly the opposite of what I was striving to achieve.</p>
+
+<p><a href="http://ankitahuja.com/apps/proxycal">ProxyCal</a> is currently in beta. That means I am still working on it. Here are some features I would be adding soon:</p>
+
+<ul>
+<li><p>Ability to store your weekly timetable so that it can give you an estimation of your attendance in each subject.</p></li>
+<li><p>A screencast demonstrating use of ProxyCal. Even though it is very simple to use.</p></li>
+<li><p>Ability to download a PDF of the attendance log for any selected time period.</p></li>
+<li><p>ProxyCal does not work on Internet Explorer.</p></li>
+</ul>
+
+
+<p>I have developed ProxyCal in an agile manner. I wanted to get it done quickly for two reasons. One, I couldn&#8217;t wait to start using it :). Also, I have to look up things for the coming summer so I don&#8217;t want to be stuck up on what I already know how to do.</p>
+
+<p>And so, Proxycal is another example of an app I have built as a result of my personal needs. Maybe in future, I may think about creating something (similar to ProxyCal) which will be useful for a wider audience, like highlighting deadline for events.</p>
+
+<p>You can start using ProxyCal by going here : <a href="http://ankitahuja.com/apps/proxycal">http://ankitahuja.com/apps/proxycal</a></p>
+
+<p>And as the footer of this app so prominently says,</p>
+
+<blockquote>&#8220;Thou shall not run short on attendance ever again!&#8221;</blockquote>
+
+
+<p>Here is a screenshot:</p>
+
+<p><img class="center" src="http://img.skitch.com/20090305-c38u4w7qwgnpgau8r45ukig84f.jpg"></p>
+
+<p>Feel free to suggest any features or report back any bugs or just comment. You can use the feedback tab on the left on the app page for this purpose.</p>
+</div>
+
+
+  <footer>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://ankit.github.io/blog/2009/03/07/proxycal/" data-via="ahujaankit" data-counturl="http://ankit.github.io/blog/2009/03/07/proxycal/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2009/01/07/twitkut-usage-stats/" title="Previous Post: Twitkut Usage Stats">&laquo; Twitkut Usage Stats</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2009/04/27/im-in-gsoc/" title="next Post: I'm in! #GSoC">I'm in! #GSoC &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+
+    </div>
+  </div>
+  <div class="search-container">
+    
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:ankit.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+
+  </div>
+  <footer role="contentinfo">
+    <p>
+  Copyright &copy; 2017 - Ankit Ahuja -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+  - Theme adapted from <a href='http://aron.cedercrantz.com/'>Aron</a>
+</p>
+
+
+  </footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'ankitahuja';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

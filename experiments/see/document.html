@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+      body {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 15px;
+      }
+      .highlight { background-color: yellow }
+    </style>
+
+    <script type="text/javascript" charset="utf-8" src="libs/jquery.js"></script>
+    <script type="text/javascript" charset="utf-8" src="libs/jquery.highlight.js"></script>
+    <script type="text/javascript">
+
+    $(document).ready(function() {
+      $('body').html(getParameterByName('text'));
+      var entities = getParameterByName('entities');
+      var entity = getParameterByName('entity');
+      if (entities !== "") {
+        entities = entities.split(",");
+        var len = entities.length;
+        for (var i = 0; i < len; i++) {
+          $('body').highlight(entities[i]);
+        }
+      } else if (entity !== "") {
+        $('body').highlight(entity);
+      }
+    });
+
+    // http://stackoverflow.com/questions/901115/get-query-string-values-in-javascript
+    function getParameterByName(name) {
+      name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+      var regexS = "[\\?&]" + name + "=([^&#]*)";
+      var regex = new RegExp(regexS);
+      var results = regex.exec(window.location.href);
+      if(results == null)
+        return "";
+      else
+        return decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

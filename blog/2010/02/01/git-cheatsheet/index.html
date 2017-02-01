@@ -1,0 +1,482 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>git Cheatsheet - Ankit Ahuja</title>
+  <meta name="author" content="Ankit Ahuja">
+
+  
+  <meta name="description" content="When you&#8217;re new to git, it can get difficult to wrap your head around it at first. This is especially true if you&#8217;re migrating from &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://ankit.github.io/blog/2010/02/01/git-cheatsheet">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Ankit Ahuja" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   class="no-sidebar"  >
+  <header role="banner">
+    <hgroup>
+  <h1><a href="/">Ankit Ahuja</a></h1>
+  
+    <h2>Code. Experiment. Read.</h2>
+  
+</hgroup>
+
+
+  </header>
+  <nav role="navigation">
+    
+<ul class="main-navigation">
+  <li>
+    <a href="/blog">
+      Blog
+    </a>
+  </li>
+  <li>
+    <a href="/projects">
+      Projects
+    </a>
+  </li>
+  <li>
+    <a href="/resume">
+      Résumé
+    </a>
+  </li>
+  <li>
+    <a href="/thesis">
+      Thesis
+    </a>
+  </li>
+  <li>
+</ul>
+
+
+  </nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Git Cheatsheet</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-02-01T00:00:00-08:00" pubdate data-updated="true">Feb 1<span>st</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>When you&#8217;re new to git, it can get difficult to wrap your head around it at first. This is especially true if you&#8217;re migrating from subversion or when you&#8217;d rather spend more time writing your code than trying to learn git.</p>
+
+<p>Git requires some learning, and you might as well spend the time doing it rather than wondering what just happened after running a command. <a href="http://learn.github.com">Learn.github</a> is a good place to start to learn the basics.</p>
+
+<p>But even after spending some time learning git, there are going to be times that you&#8217;ve to painfully search the web/manual for basic stuff like working with remote branches or more complex stuff like handling a failed merge.</p>
+
+<p>For the same reason, I&#8217;m creating this post as a reference point for myself to avoid repetitive searches. I&#8217;ll keep adding new commands here if and when I use them.</p>
+
+<!-- more -->
+
+
+<p>This is no way near to a complete reference for git and there might be better ways to do the things listed here. These are just the commands I use the most, in the manner I prefer to use them.</p>
+
+<h2>Basics</h2>
+
+<ul>
+<li>Commit and Stage all changes</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git commit -am <span class="s2">&quot;log message&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Push Changes to remote repo</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git push
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Pull Changes to local repo</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git pull
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Check current status of working tree</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git status
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>View diff</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git diff
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Discard local uncommitted changes to a file (in this case, abc.txt)</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git checkout -- abc.txt
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Branches (Branch name is assumed to be <code>abc</code>)</h2>
+
+<h3>Working with local branches</h3>
+
+<ul>
+<li>Create a branch</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git branch abc
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Switch to a branch</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git checkout abc
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>View all existing branches</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git branch
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Remove a branch</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git branch -d abc
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Merge a branch</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c"># In this case, merging abc into master</span>
+</span><span class='line'>git checkout master
+</span><span class='line'>git merge abc
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Working with remote branches</h3>
+
+<ul>
+<li>Push a local branch to remote repo</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git push origin abc
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Delete a remote branch</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git push origin :abc
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Setup a local branch to track a remote branch</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git branch --track abc origin/abc
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Create a local branch, push it to remote repo. and then pull changes from it</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c"># Creating the new branch and switching to it</span>
+</span><span class='line'>git checkout -b abc;
+</span><span class='line'>
+</span><span class='line'><span class="c"># Pushing the changes</span>
+</span><span class='line'>git push
+</span><span class='line'>
+</span><span class='line'><span class="c"># Meanwhile someone else made changes to the remote version</span>
+</span><span class='line'><span class="c"># Pulling those changes</span>
+</span><span class='line'>git pull origin abc
+</span><span class='line'>
+</span><span class='line'><span class="c"># if you want to simply use &#39;git pull&#39; to get the changes, do the following</span>
+</span><span class='line'>git config branch.abc.remote origin
+</span><span class='line'>git config branch.abc.merge refs/heads/abc
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Alternative methods listed <a href="http://djwonk.com/blog/2009/04/18/tracking-remote-git-branches/">here</a>.</p>
+
+<h2>Tags (Tag name is assumed to be v1.0 here)</h2>
+
+<ul>
+<li>View all tags</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git tag
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Create a tag referencing a particular commit using its checksum (annotated)</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c"># here commit checksum is assumed to be 98eda02.</span>
+</span><span class='line'>
+</span><span class='line'><span class="c"># to view the checksum of a commit, you can do</span>
+</span><span class='line'>git log --pretty<span class="o">=</span>oneline
+</span><span class='line'>
+</span><span class='line'>git tag -am <span class="s1">&#39;v1.0&#39;</span> 98eda02
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Push tags to remote repo</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git push --tags
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Delete a local tag</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git tag -d v1.0
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Rename a local tag</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git tag NEW_TAG OLD_TAG
+</span><span class='line'>git tag -d OLD_TAG<span class="o">[</span>/bash<span class="o">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Delete a remote tag</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git push origin :refs/tags/v1.0
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Useful Git References</h2>
+
+<ul>
+<li><a href="http://learn.github.com">Learn.github</a></li>
+<li><a href="http://github.com/guides/git-cheat-sheet">Github&#8217;s git cheatsheet</a></li>
+</ul>
+
+</div>
+
+
+  <footer>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://ankit.github.io/blog/2010/02/01/git-cheatsheet/" data-via="ahujaankit" data-counturl="http://ankit.github.io/blog/2010/02/01/git-cheatsheet/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2010/01/28/how-gleebox-makes-browsing-the-web-faster-and-more-fun/" title="Previous Post: How gleeBox makes browsing the web faster and more fun">&laquo; How gleeBox makes browsing the web faster and more fun</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2011/05/06/deploying-on-dreamhost-using-git/" title="next Post: Deploying on Dreamhost using Git">Deploying on Dreamhost using Git &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+
+    </div>
+  </div>
+  <div class="search-container">
+    
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:ankit.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+
+  </div>
+  <footer role="contentinfo">
+    <p>
+  Copyright &copy; 2017 - Ankit Ahuja -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+  - Theme adapted from <a href='http://aron.cedercrantz.com/'>Aron</a>
+</p>
+
+
+  </footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'ankitahuja';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+  <!-- Header -->
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <title>Aware - Forum</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/less.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  </head>
+  <!-- End of Header -->
+
+<body>
+  <!-- Navigation Bar -->
+  <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <a href="instructor_quiz_2.html" class="brand">
+          Aware
+        </a>
+        <form class="navbar-search pull-left">
+          <input type="text" class="span8" placeholder="Search all of Aware...">
+        </form>
+        <div class="nav-collapse">
+          <ul class="nav pull-right">
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                  <i class="icon-user icon-white"></i>
+                  Dave
+                  <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Account Settings</a></li>
+                  <li><a href="#">Log Out</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End of Navigation Bar -->
+
+  <!-- Body -->
+  <div class="container">
+    <div class="row">
+      <!-- Top Navigation -->
+      <div class="span10">
+        <ul class="nav nav-pills">
+            <li>
+              <a href="instructor_quiz_2.html">
+                <i class="icon-home"></i>
+                Lecture 3
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="icon-file"></i>
+                Assignments
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="icon-book"></i>
+                Resources
+              </a>
+            </li>
+            <li class="active">
+             <a href="student_forum_1.html">
+              <i class="icon-comment icon-white"></i>
+              Forum
+            </a>
+            </li>
+        </ul>
+      </div>
+    </div>
+        
+    <div class="row well span11">
+      <input type="text" 
+             class="input-medium search-query typeahead span8 has-popover" 
+             placeholder="Search existing posts..."
+             data-provide="typeahead"
+             title="Search"
+             data-content="Type here to see autocomplete for search. Try 'a'"
+             data-placement="top"
+             data-trigger="manual" />
+      
+      <div class="pull-right">
+        <a href="#" class="btn btn-primary">
+          Search
+        </a>
+        <a href="student_forum_2.html" 
+           class="btn btn-success has-popover"
+           title="Add a new post"
+           data-content="Click to add a new post to forum"
+           data-trigger="manual"
+           data-placement="top">
+          Add a new post
+        </a>
+      </div>
+    </div>
+
+      <div class="row" style="margin-left: 0px">
+        <div class="span4" style="width: 240px">
+          <ul class="nav nav-list" style="border: 1px solid #ddd; border-radius: 5px; padding: 0">
+            <li class="nav-header" style="margin-left: -5px; margin-top: 5px;">
+              Open Threads
+            </li>
+            
+            <li style="padding: 20px 10px; margin: 0; border-bottom: 1px solid #eee">
+              <div class="row">
+                <a href="#" class="span2" style="width: 120px">
+                  What is OOP?
+                </a>
+                <div class="span1 pull-right" style="width: 55px; font-size: 11px">
+                  1 hour ago
+                </div>
+              </div>
+              <div style="color: #888; margin-left: 0">
+                Can you give an example of pointer use? Maybe in C?
+              </div>
+              <span class="label label-info">programming</span>
+              <span class="label label-success">lecture2</span>
+              <span class="label label-warning">homework1</span>
+            </li>
+            
+            <li style="padding: 20px 10px; margin: 0; border-bottom: 1px solid #eee">
+              <div class="row">
+                <a href="#" class="span2" style="width: 120px">
+                  What is an Object?
+                </a>
+                <div class="span1 pull-right" style="width: 60px; font-size: 11px">
+                  2 hours ago
+                </div>
+              </div>
+              <div style="color: #888; margin-left: 0">
+                More specifically, in OOP
+              </div>
+              <span class="label label-info">programming</span>
+            </li>
+
+            <li style="background-color: #eee; padding: 20px 10px; margin: 0; border-bottom: 1px solid #eee;">
+              <div class="row">
+                <a href="#" class="span2" style="width: 130px">
+                  How to use pointers?
+                </a>
+                <div class="span1 pull-right" style="width: 55px; font-size: 11px">
+                  2 days ago
+                </div>
+              </div>
+              <div style="color: #888; margin-left: 0">
+                Maybe you could give an example?
+              </div>
+              <span class="label label-danger">workshop3</span>
+            </li>
+
+            <li style="padding: 20px 10px; margin: 0;">
+              <div class="row">
+                <a href="#" class="span2" style="width: 130px">
+                  Define an array?
+                </a>
+                <div class="span1 pull-right" style="width: 55px; font-size: 11px">
+                  3 days ago
+                </div>
+              </div>
+              <div style="color: #888; margin-left: 0">
+              </div>
+              <span class="label label-info">programming</span>
+            </li>
+
+          </ul>
+        </div>
+
+        <div class="span8 well" style="padding: 10px; height: 300px">
+          <h3>How to use pointers?</h3>
+          <span class="label label-info">programming</span>
+          <span class="label label-success">lecture2</span>
+          <span class="label label-warning">homework1</span>
+          <div class="pull-right">
+            by <a href="">Ankit</a> 2 days ago
+          </div>
+          <hr>
+          Can you give an example of pointer use? Maybe in C?
+          <hr>
+          <h3>Answers</h3>
+          <hr>
+          <textarea class="span8" rows="5" placeholder="Enter your response here..."></textarea>
+        </div>
+      </div>
+    <!-- End of Body -->
+
+    <!-- Footer -->
+    <footer class="footer">
+      <hr>
+      &copy; 2012 Aware Team |
+      <a href="http://vt.edu">Virginia Tech</a>
+    </footer>
+    <!-- End of Footer -->
+  </div>
+</body>
+</html>
