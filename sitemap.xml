@@ -1,143 +1,123 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://ankitahuja.com/blog/2008/03/08/hello-world-2/</loc>
-        <lastmod>2017-02-01T14:10:42-08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://ankitahuja.com/blog/2008/03/18/urdu-nazm-rasm/</loc>
-        <lastmod>2017-02-01T14:10:42-08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://ankitahuja.com/blog/2008/04/03/the-dreaming-subconscious-mind/</loc>
+        <loc>http://ankit.github.io/blog/2008/03/18/urdu-nazm-rasm/</loc>
         <lastmod>2017-02-01T14:10:42-08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://ankitahuja.com/blog/2008/04/15/top-10-applications-that-deserve-a-place-in-your-windows-taskbar/
+            http://ankit.github.io/blog/2008/04/15/top-10-applications-that-deserve-a-place-in-your-windows-taskbar/
         </loc>
         <lastmod>2017-02-01T14:10:42-08:00</lastmod>
     </url>
     <url>
-        <loc>http://ankitahuja.com/blog/2008/04/29/what-is-a-geek/</loc>
+        <loc>http://ankit.github.io/blog/2008/07/13/friendcompare/</loc>
         <lastmod>2017-02-01T14:10:42-08:00</lastmod>
     </url>
     <url>
-        <loc>http://ankitahuja.com/blog/2008/05/17/yes-i-do-believe-in-astrology/</loc>
+        <loc>http://ankit.github.io/blog/2008/10/22/pollbol/</loc>
         <lastmod>2017-02-01T14:10:42-08:00</lastmod>
     </url>
     <url>
-        <loc>http://ankitahuja.com/blog/2008/07/13/friendcompare/</loc>
+        <loc>http://ankit.github.io/blog/2008/11/13/twitkut/</loc>
         <lastmod>2017-02-01T14:10:42-08:00</lastmod>
     </url>
     <url>
-        <loc>http://ankitahuja.com/blog/2008/09/14/a-hectic-week-that-was/</loc>
+        <loc>http://ankit.github.io/blog/2009/01/06/my-twitter-wordle/</loc>
         <lastmod>2017-02-01T14:10:42-08:00</lastmod>
     </url>
     <url>
-        <loc>http://ankitahuja.com/blog/2008/10/22/pollbol/</loc>
+        <loc>http://ankit.github.io/blog/2009/01/07/twitkut-usage-stats/</loc>
         <lastmod>2017-02-01T14:10:42-08:00</lastmod>
     </url>
     <url>
-        <loc>http://ankitahuja.com/blog/2008/11/13/twitkut/</loc>
+        <loc>http://ankit.github.io/blog/2009/03/07/proxycal/</loc>
         <lastmod>2017-02-01T14:10:42-08:00</lastmod>
     </url>
     <url>
-        <loc>http://ankitahuja.com/blog/2009/01/06/my-twitter-wordle/</loc>
-        <lastmod>2017-02-01T14:10:42-08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://ankitahuja.com/blog/2009/01/07/twitkut-usage-stats/</loc>
-        <lastmod>2017-02-01T14:10:42-08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://ankitahuja.com/blog/2009/03/07/proxycal/</loc>
-        <lastmod>2017-02-01T14:10:42-08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://ankitahuja.com/blog/2009/04/27/im-in-gsoc/</loc>
+        <loc>http://ankit.github.io/blog/2009/04/27/im-in-gsoc/</loc>
         <lastmod>2017-02-01T14:10:42-08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://ankitahuja.com/blog/2009/09/21/back-after-an-amazing-trip-to-mussoorie-and-rishikesh/
+            http://ankit.github.io/blog/2009/09/21/back-after-an-amazing-trip-to-mussoorie-and-rishikesh/
         </loc>
         <lastmod>2017-02-01T14:10:42-08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://ankitahuja.com/blog/2009/09/24/short-movie-on-the-mussoorie-rishikesh-trip/
+            http://ankit.github.io/blog/2009/09/24/short-movie-on-the-mussoorie-rishikesh-trip/
         </loc>
         <lastmod>2017-02-01T14:10:42-08:00</lastmod>
     </url>
     <url>
-        <loc>http://ankitahuja.com/blog/2009/09/28/twitkut-v2-0-to-be-an-oauth-gadget/</loc>
+        <loc>http://ankit.github.io/blog/2009/09/28/twitkut-v2-0-to-be-an-oauth-gadget/</loc>
         <lastmod>2017-02-01T14:10:42-08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://ankitahuja.com/blog/2009/10/01/installing-the-front-end-editor-extension-on-joomla-1-5/
-        </loc>
-        <lastmod>2017-02-01T14:10:42-08:00</lastmod>
-    </url>
-    <url>
-        <loc>
-            http://ankitahuja.com/blog/2009/10/04/the-mental-catastrophe-that-is-the-social-web/
+            http://ankit.github.io/blog/2009/10/01/installing-the-front-end-editor-extension-on-joomla-1-5/
         </loc>
         <lastmod>2017-02-01T14:10:42-08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://ankitahuja.com/blog/2010/01/28/how-gleebox-makes-browsing-the-web-faster-and-more-fun/
+            http://ankit.github.io/blog/2009/10/04/the-mental-catastrophe-that-is-the-social-web/
         </loc>
         <lastmod>2017-02-01T14:10:42-08:00</lastmod>
     </url>
     <url>
-        <loc>http://ankitahuja.com/blog/2010/02/01/git-cheatsheet/</loc>
+        <loc>
+            http://ankit.github.io/blog/2010/01/28/how-gleebox-makes-browsing-the-web-faster-and-more-fun/
+        </loc>
         <lastmod>2017-02-01T14:10:42-08:00</lastmod>
     </url>
     <url>
-        <loc>http://ankitahuja.com/blog/2011/05/06/deploying-on-dreamhost-using-git/</loc>
+        <loc>http://ankit.github.io/blog/2010/02/01/git-cheatsheet/</loc>
         <lastmod>2017-02-01T14:10:42-08:00</lastmod>
     </url>
     <url>
-        <loc>http://ankitahuja.com/blog/2012/08/27/summer-at-khan-academy/</loc>
+        <loc>http://ankit.github.io/blog/2011/05/06/deploying-on-dreamhost-using-git/</loc>
         <lastmod>2017-02-01T14:10:42-08:00</lastmod>
     </url>
     <url>
-        <loc>http://ankitahuja.com/404.html</loc>
+        <loc>http://ankit.github.io/blog/2012/08/27/summer-at-khan-academy/</loc>
         <lastmod>2017-02-01T14:10:42-08:00</lastmod>
     </url>
     <url>
-        <loc>http://ankitahuja.com/apps/</loc>
+        <loc>http://ankit.github.io/404.html</loc>
         <lastmod>2017-02-01T14:10:42-08:00</lastmod>
     </url>
     <url>
-        <loc>http://ankitahuja.com/blog/archives/</loc>
+        <loc>http://ankit.github.io/apps/</loc>
         <lastmod>2017-02-01T14:10:42-08:00</lastmod>
     </url>
     <url>
-        <loc>http://ankitahuja.com/blog/</loc>
+        <loc>http://ankit.github.io/blog/archives/</loc>
         <lastmod>2017-02-01T14:10:42-08:00</lastmod>
     </url>
     <url>
-        <loc>http://ankitahuja.com/</loc>
+        <loc>http://ankit.github.io/blog/</loc>
         <lastmod>2017-02-01T14:10:42-08:00</lastmod>
     </url>
     <url>
-        <loc>http://ankitahuja.com/mockups/</loc>
+        <loc>http://ankit.github.io/</loc>
         <lastmod>2017-02-01T14:10:42-08:00</lastmod>
     </url>
     <url>
-        <loc>http://ankitahuja.com/projects/</loc>
+        <loc>http://ankit.github.io/mockups/</loc>
+        <lastmod>2017-02-01T14:10:42-08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://ankit.github.io/projects/</loc>
         <lastmod>2017-02-01T14:15:32-08:00</lastmod>
     </url>
     <url>
-        <loc>http://ankitahuja.com/resume/</loc>
+        <loc>http://ankit.github.io/resume/</loc>
         <lastmod>2017-02-01T14:10:42-08:00</lastmod>
     </url>
     <url>
-        <loc>http://ankitahuja.com/thesis/</loc>
+        <loc>http://ankit.github.io/thesis/</loc>
         <lastmod>2017-02-01T14:10:42-08:00</lastmod>
     </url>
 </urlset>
