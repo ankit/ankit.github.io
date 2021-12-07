@@ -1,5 +1,0 @@
----
-menu:
-  main:
-    name: blog
----
