@@ -1,0 +1,20 @@
+.bundle
+.DS_Store
+.sass-cache
+.gist-cache
+.pygments-cache
+.preview-mode
+_deploy
+public
+sass.old
+source.old
+source/_stash
+source/stylesheets/screen.css
+vendor
+node_modules
+Gemfile.lock
+
+# Latex
+*.aux
+*.log
+*.synctex.gz

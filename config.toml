@@ -1,0 +1,13 @@
+baseURL = "http://ankitahuja.com/"
+languageCode = "en-us"
+title = "Ankit Ahuja"
+theme = "paper"
+
+[Params]
+    mainSections = ["post"]
+    intro = true
+    headline = "My headline"
+    description = "My description"
+
+[Permalinks]
+    blog = "/:filename/"

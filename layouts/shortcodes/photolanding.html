@@ -1,0 +1,13 @@
+<div class="photo-gallery-container">
+  <ul class="photo-gallery-menu">
+    {{- range .Site.Menus.photography }}
+    <li>
+      <a href="{{ .URL }}">{{ .Name }}</a>
+    </li>
+    {{- end }}
+  </ul>
+
+  <div class="photo-gallery">
+    <img class="photo" src="images/1.jpg" />
+  </div>
+</div>
