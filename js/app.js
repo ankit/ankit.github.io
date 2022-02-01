@@ -201,6 +201,37 @@ const albums = [
       {
         src: "https://ik.imagekit.io/hwked/wildlife/tr:h-1200/11.jpg",
       },
+      {
+        src: "https://ik.imagekit.io/hwked/wildlife/tr:h-1200/12.jpg",
+      },
+    ],
+  },
+
+  {
+    id: "india",
+    title: "India",
+    photos: [
+      {
+        src: "https://ik.imagekit.io/hwked/india/tr:h-1200/7.jpg",
+      },
+      {
+        src: "https://ik.imagekit.io/hwked/india/tr:h-1200/1.jpg",
+      },
+      {
+        src: "https://ik.imagekit.io/hwked/india/tr:h-1200/2.jpg",
+      },
+      {
+        src: "https://ik.imagekit.io/hwked/india/tr:h-1200/3.jpg",
+      },
+      {
+        src: "https://ik.imagekit.io/hwked/india/tr:h-1200/4.jpg",
+      },
+      {
+        src: "https://ik.imagekit.io/hwked/india/tr:h-1200/5.jpg",
+      },
+      {
+        src: "https://ik.imagekit.io/hwked/india/tr:h-1200/6.jpg",
+      },
     ],
   },
 
