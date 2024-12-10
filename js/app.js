@@ -1,7 +1,6 @@
 const albums = [
   {
     id: "tokyo",
-    title: "Tokyo",
     photos: [
       {
         src: "https://ik.imagekit.io/hwked/tokyo/tr:h-1200/1.jpg",
@@ -17,12 +16,6 @@ const albums = [
       },
       {
         src: "https://ik.imagekit.io/hwked/tokyo/tr:h-1200/5.jpg",
-      },
-      {
-        src: "https://ik.imagekit.io/hwked/tokyo/tr:h-1200/6.jpg",
-      },
-      {
-        src: "https://ik.imagekit.io/hwked/tokyo/tr:h-1200/7.jpg",
       },
       {
         src: "https://ik.imagekit.io/hwked/tokyo/tr:h-1200/8.jpg",
@@ -45,12 +38,50 @@ const albums = [
       {
         src: "https://ik.imagekit.io/hwked/tokyo/tr:h-1200/14.jpg",
       },
+      {
+        src: "https://ik.imagekit.io/hwked/japan/tr:h-1200/1.jpg",
+      },
+      {
+        src: "https://ik.imagekit.io/hwked/japan/tr:h-1200/2.jpg",
+      },
+      {
+        src: "https://ik.imagekit.io/hwked/japan/tr:h-1200/3.jpg",
+      },
+      {
+        src: "https://ik.imagekit.io/hwked/japan/tr:h-1200/4.jpg",
+      },
+      {
+        src: "https://ik.imagekit.io/hwked/japan/tr:h-1200/5.jpg",
+      },
+      {
+        src: "https://ik.imagekit.io/hwked/japan/tr:h-1200/6.jpg",
+      },
+      {
+        src: "https://ik.imagekit.io/hwked/japan/tr:h-1200/7.jpg",
+      },
+      {
+        src: "https://ik.imagekit.io/hwked/japan/tr:h-1200/8.jpg",
+      },
+      {
+        src: "https://ik.imagekit.io/hwked/japan/tr:h-1200/9.jpg",
+      },
+      {
+        src: "https://ik.imagekit.io/hwked/japan/tr:h-1200/10.jpg",
+      },
+      {
+        src: "https://ik.imagekit.io/hwked/japan/tr:h-1200/11.jpg",
+      },
+      {
+        src: "https://ik.imagekit.io/hwked/japan/tr:h-1200/12.jpg",
+      },
+      {
+        src: "https://ik.imagekit.io/hwked/japan/tr:h-1200/13.jpg",
+      },
     ],
   },
 
   {
     id: "nyc",
-    title: "NYC",
     photos: [
       {
         src: "https://ik.imagekit.io/hwked/nyc/tr:h-1200/6.jpg",
@@ -123,7 +154,6 @@ const albums = [
 
   {
     id: "sf",
-    title: "San Francisco",
     photos: [
       {
         src: "https://ik.imagekit.io/hwked/san-francisco/tr:h-1200/6.jpg",
@@ -166,7 +196,6 @@ const albums = [
 
   {
     id: "wildlife",
-    title: "Wildlife",
     photos: [
       {
         src: "https://ik.imagekit.io/hwked/wildlife/tr:h-1200/1.jpg",
@@ -209,7 +238,6 @@ const albums = [
 
   {
     id: "india",
-    title: "India",
     photos: [
       {
         src: "https://ik.imagekit.io/hwked/india/tr:h-1200/7.jpg",
@@ -234,56 +262,8 @@ const albums = [
       },
     ],
   },
-
-  {
-    id: "japan",
-    title: "Japan",
-    photos: [
-      {
-        src: "https://ik.imagekit.io/hwked/japan/tr:h-1200/1.jpg",
-      },
-      {
-        src: "https://ik.imagekit.io/hwked/japan/tr:h-1200/2.jpg",
-      },
-      {
-        src: "https://ik.imagekit.io/hwked/japan/tr:h-1200/3.jpg",
-      },
-      {
-        src: "https://ik.imagekit.io/hwked/japan/tr:h-1200/4.jpg",
-      },
-      {
-        src: "https://ik.imagekit.io/hwked/japan/tr:h-1200/5.jpg",
-      },
-      {
-        src: "https://ik.imagekit.io/hwked/japan/tr:h-1200/6.jpg",
-      },
-      {
-        src: "https://ik.imagekit.io/hwked/japan/tr:h-1200/7.jpg",
-      },
-      {
-        src: "https://ik.imagekit.io/hwked/japan/tr:h-1200/8.jpg",
-      },
-      {
-        src: "https://ik.imagekit.io/hwked/japan/tr:h-1200/9.jpg",
-      },
-      {
-        src: "https://ik.imagekit.io/hwked/japan/tr:h-1200/10.jpg",
-      },
-      {
-        src: "https://ik.imagekit.io/hwked/japan/tr:h-1200/11.jpg",
-      },
-      {
-        src: "https://ik.imagekit.io/hwked/japan/tr:h-1200/12.jpg",
-      },
-      {
-        src: "https://ik.imagekit.io/hwked/japan/tr:h-1200/13.jpg",
-      },
-    ],
-  },
-
   {
     id: "shops",
-    title: "Shops",
     photos: [
       {
         src: "https://ik.imagekit.io/hwked/shops/tr:h-1200/10.jpg",
@@ -338,7 +318,6 @@ const albums = [
 
   {
     id: "shutters",
-    title: "Shutters",
     photos: [
       {
         src: "https://ik.imagekit.io/hwked/shutters/tr:h-1200/1.jpg",
@@ -382,8 +361,7 @@ const albums = [
     ],
   },
   {
-    id: "aerial",
-    title: "Aerial",
+    id: "drone",
     photos: [
       {
         src: "https://ik.imagekit.io/hwked/aerial/tr:h-1200/1.jpg",
