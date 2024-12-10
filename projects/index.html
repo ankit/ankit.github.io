@@ -41,16 +41,17 @@
 <a class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal" href=/blog/>blog</a>
 <a class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal" href=/projects/>projects</a>
 </nav>
-<nav class="mt-12 flex justify-center space-x-10 rtl:space-x-reverse dark:invert ltr:lg:ml-14 rtl:lg:mr-14 lg:mt-0 lg:items-center">
-<a class="h-7 w-7 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6" style=--url:url(./github.svg) href=https://github.com/ankit target=_blank rel=me>
+<nav class="mt-12 flex justify-center space-x-10 rtl:space-x-reverse ltr:lg:ml-14 rtl:lg:mr-14 lg:mt-0 lg:items-center">
+<a class="h-7 w-7 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6 dark:invert" style=--url:url(./github.svg) href=https://github.com/ankit target=_blank rel=me>
 github
 </a>
-<a class="h-7 w-7 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6" style=--url:url(./instagram.svg) href=https://instagram.com/hwked target=_blank rel=me>
+<a class="h-7 w-7 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6 dark:invert" style=--url:url(./instagram.svg) href=https://instagram.com/hwked target=_blank rel=me>
 instagram
 </a>
-<a class="h-7 w-7 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6" style=--url:url(./linkedin.svg) href=https://linkedin.com/in/ahujaankit target=_blank rel=me>
+<a class="h-7 w-7 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6 dark:invert" style=--url:url(./linkedin.svg) href=https://linkedin.com/in/ahujaankit target=_blank rel=me>
 linkedin
 </a>
+<div class="btn-dark text-[0] ltr:ml-4 rtl:mr-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]" role=button aria-label=Dark></div>
 </nav>
 </div>
 </header>
@@ -74,7 +75,6 @@ linkedin
 &copy; 2024
 <a class=link href=https://ankitahuja.com/>Ankit Ahuja</a>
 </div>
-<div class="btn-dark text-[0] ltr:ml-4 rtl:mr-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]" role=button aria-label=Dark></div>
 <script>const metaTheme=document.querySelector('meta[name="theme-color"]'),lightBg='#faf8f1'.replace(/"/g,''),setDark=a=>{metaTheme.setAttribute('content',a?'#000':lightBg),htmlClass[a?'add':'remove']('dark'),localStorage.setItem('dark',a)},darkScheme=window.matchMedia('(prefers-color-scheme: dark)');if(htmlClass.contains('dark'))setDark(!0);else{const a=localStorage.getItem('dark');setDark(a?a==='true':darkScheme.matches)}darkScheme.addEventListener('change',a=>{setDark(a.matches)});const btnDark=document.querySelector('.btn-dark');btnDark.addEventListener('click',()=>{setDark(localStorage.getItem('dark')!=='true')})</script>
 </footer>
 </body>
