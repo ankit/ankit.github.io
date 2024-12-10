@@ -1,6 +1,7 @@
 const albums = [
   {
     id: "tokyo",
+    title: "Tokyo",
     photos: [
       {
         src: "https://ik.imagekit.io/hwked/tokyo/tr:h-1200/1.jpg",
@@ -82,6 +83,7 @@ const albums = [
 
   {
     id: "nyc",
+    title: "NYC",
     photos: [
       {
         src: "https://ik.imagekit.io/hwked/nyc/tr:h-1200/6.jpg",
@@ -154,6 +156,7 @@ const albums = [
 
   {
     id: "sf",
+    title: "San Francisco",
     photos: [
       {
         src: "https://ik.imagekit.io/hwked/san-francisco/tr:h-1200/6.jpg",
@@ -196,6 +199,7 @@ const albums = [
 
   {
     id: "wildlife",
+    title: "Wildlife",
     photos: [
       {
         src: "https://ik.imagekit.io/hwked/wildlife/tr:h-1200/1.jpg",
@@ -238,6 +242,7 @@ const albums = [
 
   {
     id: "india",
+    title: "India",
     photos: [
       {
         src: "https://ik.imagekit.io/hwked/india/tr:h-1200/7.jpg",
@@ -264,6 +269,7 @@ const albums = [
   },
   {
     id: "shops",
+    title: "Shops",
     photos: [
       {
         src: "https://ik.imagekit.io/hwked/shops/tr:h-1200/10.jpg",
@@ -318,6 +324,7 @@ const albums = [
 
   {
     id: "shutters",
+    title: "Shutters",
     photos: [
       {
         src: "https://ik.imagekit.io/hwked/shutters/tr:h-1200/1.jpg",
@@ -361,7 +368,8 @@ const albums = [
     ],
   },
   {
-    id: "drone",
+    id: "aerial",
+    title: "Aerial",
     photos: [
       {
         src: "https://ik.imagekit.io/hwked/aerial/tr:h-1200/1.jpg",
