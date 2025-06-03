@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1748911963.20272 "/Users/ankit/projects/ankitahuja.com/content/resume/resume.tex" "resume.pdf" "resume" 1748911963.72258 0
-  "/Users/ankit/projects/ankitahuja.com/content/resume/resume.tex" 1748911962.98072 6659 27d959f71b0216346a29a505bdac95cd ""
+["pdflatex"] 1748912656.59346 "/Users/ankit/projects/ankitahuja.com/content/resume/resume.tex" "resume.pdf" "resume" 1748912657.12376 0
+  "/Users/ankit/projects/ankitahuja.com/content/resume/resume.tex" 1748912656.37967 6659 491a9f9cf45a970e18beaef155f66b3d ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -61,9 +61,9 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1719330044.76108 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1719330030 8221424 ffb0e1dee9adc80d9bea016d5346cd50 ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "resume.aux" 1748911963.67914 162 87159b23cce7c2b923b11c85495bbd6d "pdflatex"
-  "resume.out" 1748911963.52448 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "resume.tex" 1748911962.98072 6659 27d959f71b0216346a29a505bdac95cd ""
+  "resume.aux" 1748912657.08086 162 87159b23cce7c2b923b11c85495bbd6d "pdflatex"
+  "resume.out" 1748912656.92153 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "resume.tex" 1748912656.37967 6659 491a9f9cf45a970e18beaef155f66b3d ""
   (generated)
   "resume.aux"
   "resume.log"
